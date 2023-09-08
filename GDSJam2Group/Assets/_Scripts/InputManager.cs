@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class InputManager : Singleton<InputManager>
 {
+    [FormerlySerializedAs("lockMouse")] public bool lockCursor;
     private PlayerInput playerInput;
     [SerializeField] private Vector3 lookDelta;
 
@@ -31,16 +33,21 @@ public class InputManager : Singleton<InputManager>
     public static event Action<bool> onTail;
 
 
-    void Awake()
+
+    protected override void Awake()
     {
+        base.Awake();
         if(playerInput == null) playerInput = GetComponent<PlayerInput>();
     }
+    
     // Start is called before the first frame update
     void Start()
     {
         if (!playerInput.camera)
             playerInput.camera = Camera.main;
-
+        
+        if(lockCursor)
+            Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OnLook(InputAction.CallbackContext context)

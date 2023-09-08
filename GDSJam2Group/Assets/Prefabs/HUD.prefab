@@ -2219,6 +2219,7 @@ MonoBehaviour:
   rightLowerImage: {fileID: 7246390283214772416}
   tailImage: {fileID: 2424729143944004539}
   activeColour: {r: 1, g: 0.9882168, b: 0.5707547, a: 1}
+  attachedColour: {r: 0.6092182, g: 1, b: 0.5707547, a: 1}
   inactiveColour: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &8961698035180155800
 GameObject:

@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverScreen;
     public TextMeshProUGUI gameOverWinLossText;
     public TextMeshProUGUI gameOverScore;
-    
+
     private void OnEnable()
     {
         if(GameStateManager.Instance != null)

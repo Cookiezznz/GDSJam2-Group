@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hazard
+  - Prop
   layers:
   - Default
   - TransparentFX
@@ -11,8 +13,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Grabable
   - 
   - 
   - 
@@ -40,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1230062141
+    locked: 0
+  - name: Foreground
+    uniqueID: 2002973263
+    locked: 0
+  - name: Player
+    uniqueID: 1332647035
+    locked: 0
+  - name: UI
+    uniqueID: 1820029463
     locked: 0

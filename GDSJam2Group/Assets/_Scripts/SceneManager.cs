@@ -29,6 +29,7 @@ namespace Managers
         public void LoadScene(Scenes scene)
         {
             int sceneIndex = (int)scene;
+            Time.timeScale = 1;
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
         }
 

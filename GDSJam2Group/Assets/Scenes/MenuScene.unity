@@ -196,7 +196,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Monkey Manufacturing
+  m_text: Monkey Manufacturin
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b30eb34fb2a92f84195460429e16a974, type: 2}
   m_sharedMaterial: {fileID: 375768854375526133, guid: db6c45e22fb3ede47be9654dde1068fb,

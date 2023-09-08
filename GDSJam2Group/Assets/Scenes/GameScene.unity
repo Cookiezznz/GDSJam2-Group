@@ -319,7 +319,7 @@ MonoBehaviour:
   rightUpper: {fileID: 1174477611}
   tail: {fileID: 215925149}
   limbMovementSpeed: 0.4
-  limbMaxSpeed: 1
+  limbMaxSpeed: 4
   leftUpperActive: 0
   leftLowerActive: 0
   rightLowerActive: 0
@@ -337,7 +337,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 100
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -416,7 +416,7 @@ CapsuleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -429,10 +429,10 @@ CapsuleCollider2D:
     m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -450,8 +450,8 @@ GameObject:
   - component: {fileID: 215925146}
   - component: {fileID: 215925147}
   - component: {fileID: 215925149}
+  - component: {fileID: 215925150}
   - component: {fileID: 215925151}
-  - component: {fileID: 215925152}
   m_Layer: 6
   m_Name: Tail
   m_TagString: Untagged
@@ -551,10 +551,10 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
---- !u!232 &215925151
-DistanceJoint2D:
+--- !u!233 &215925150
+HingeJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -562,18 +562,23 @@ DistanceJoint2D:
   m_GameObject: {fileID: 215925145}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 164531603}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 0
+  m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.39559856, y: -0.30124336}
-  m_ConnectedAnchor: {x: 0.002598558, y: -0.7712434}
-  m_AutoConfigureDistance: 1
-  m_Distance: 0.005
-  m_MaxDistanceOnly: 1
---- !u!58 &215925152
+  m_Anchor: {x: 0.37048662, y: -0.27704805}
+  m_ConnectedAnchor: {x: -0.02251339, y: -0.747048}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
+--- !u!58 &215925151
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -585,27 +590,27 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: 0.16}
+  m_Offset: {x: -0.15, y: 0.16}
   serializedVersion: 2
   m_Radius: 0.1
 --- !u!1 &244386581
@@ -1401,8 +1406,8 @@ GameObject:
   - component: {fileID: 527296638}
   - component: {fileID: 527296639}
   - component: {fileID: 527296641}
+  - component: {fileID: 527296642}
   - component: {fileID: 527296643}
-  - component: {fileID: 527296644}
   m_Layer: 6
   m_Name: RightLeg
   m_TagString: Untagged
@@ -1502,10 +1507,10 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
---- !u!232 &527296643
-DistanceJoint2D:
+--- !u!233 &527296642
+HingeJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1513,18 +1518,23 @@ DistanceJoint2D:
   m_GameObject: {fileID: 527296637}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 164531603}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 0
+  m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -0.25500003, y: 0.39500004}
-  m_ConnectedAnchor: {x: 0.14299998, y: -0.6959999}
-  m_AutoConfigureDistance: 1
-  m_Distance: 0.005
-  m_MaxDistanceOnly: 1
---- !u!58 &527296644
+  m_Anchor: {x: -0.23010135, y: 0.35142523}
+  m_ConnectedAnchor: {x: 0.16789865, y: -0.73957473}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
+--- !u!58 &527296643
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1536,27 +1546,27 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23, y: -0.37}
+  m_Offset: {x: 0.21, y: -0.35}
   serializedVersion: 2
   m_Radius: 0.1
 --- !u!1 &529713041
@@ -2600,8 +2610,8 @@ GameObject:
   - component: {fileID: 1009371256}
   - component: {fileID: 1009371257}
   - component: {fileID: 1009371259}
+  - component: {fileID: 1009371260}
   - component: {fileID: 1009371261}
-  - component: {fileID: 1009371262}
   m_Layer: 6
   m_Name: LeftArm
   m_TagString: Untagged
@@ -2701,10 +2711,10 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
---- !u!232 &1009371261
-DistanceJoint2D:
+--- !u!233 &1009371260
+HingeJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2712,18 +2722,23 @@ DistanceJoint2D:
   m_GameObject: {fileID: 1009371255}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 164531603}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 0
+  m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.34967694, y: -0.06696642}
-  m_ConnectedAnchor: {x: -0.14132306, y: 0.09303359}
-  m_AutoConfigureDistance: 1
-  m_Distance: 0.005
-  m_MaxDistanceOnly: 1
---- !u!58 &1009371262
+  m_Anchor: {x: 0.33452404, y: -0.05466982}
+  m_ConnectedAnchor: {x: -0.15647599, y: 0.10533019}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
+--- !u!58 &1009371261
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2735,27 +2750,27 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3, y: 0.1}
+  m_Offset: {x: -0.27, y: 0.04}
   serializedVersion: 2
   m_Radius: 0.1
 --- !u!1 &1121421659
@@ -2903,8 +2918,8 @@ GameObject:
   - component: {fileID: 1174477608}
   - component: {fileID: 1174477609}
   - component: {fileID: 1174477611}
+  - component: {fileID: 1174477612}
   - component: {fileID: 1174477613}
-  - component: {fileID: 1174477614}
   m_Layer: 6
   m_Name: RightArm
   m_TagString: Untagged
@@ -3004,10 +3019,10 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
---- !u!232 &1174477613
-DistanceJoint2D:
+--- !u!233 &1174477612
+HingeJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3015,18 +3030,23 @@ DistanceJoint2D:
   m_GameObject: {fileID: 1174477607}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 164531603}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 0
+  m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -0.3800032, y: -0.07843821}
-  m_ConnectedAnchor: {x: 0.1949968, y: 0.07156181}
-  m_AutoConfigureDistance: 1
-  m_Distance: 0.005
-  m_MaxDistanceOnly: 1
---- !u!58 &1174477614
+  m_Anchor: {x: -0.36039102, y: -0.09152998}
+  m_ConnectedAnchor: {x: 0.21460901, y: 0.058470044}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
+--- !u!58 &1174477613
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3038,27 +3058,27 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.37, y: 0.1}
+  m_Offset: {x: 0.45, y: 0.14}
   serializedVersion: 2
   m_Radius: 0.1
 --- !u!1 &1244712837
@@ -4418,8 +4438,8 @@ GameObject:
   - component: {fileID: 1719444421}
   - component: {fileID: 1719444422}
   - component: {fileID: 1719444424}
+  - component: {fileID: 1719444425}
   - component: {fileID: 1719444426}
-  - component: {fileID: 1719444427}
   m_Layer: 6
   m_Name: LeftLeg
   m_TagString: Untagged
@@ -4519,10 +4539,10 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
---- !u!232 &1719444426
-DistanceJoint2D:
+--- !u!233 &1719444425
+HingeJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4530,18 +4550,23 @@ DistanceJoint2D:
   m_GameObject: {fileID: 1719444420}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 0
+  m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 164531603}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_BreakAction: 0
+  m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0.29500002, y: 0.40999988}
-  m_ConnectedAnchor: {x: -0.126, y: -0.7510001}
-  m_AutoConfigureDistance: 1
-  m_Distance: 0.005
-  m_MaxDistanceOnly: 1
---- !u!58 &1719444427
+  m_Anchor: {x: 0.29500002, y: 0.41}
+  m_ConnectedAnchor: {x: -0.126, y: -0.751}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
+--- !u!58 &1719444426
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4553,27 +4578,27 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 55
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_ContactCaptureLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_CallbackLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.3, y: -0.39}
+  m_Offset: {x: -0.27, y: -0.35}
   serializedVersion: 2
   m_Radius: 0.1
 --- !u!1 &1741895918

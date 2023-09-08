@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float limbMaxSpeed;
     [Tooltip("The radius (units) from which limbs can grab objects.")]
     public float grabRadius;
+    public bool toggleGravityOnActivate;
 
 
     [Header("Limbs")] 
@@ -80,22 +81,32 @@ public class PlayerController : MonoBehaviour
     private void ToggleLeftUpper(bool toggle)
     {
         leftUpperActive = toggle;
+        if(toggleGravityOnActivate)
+            leftUpper.gravityScale = toggle ? 0 : 1;
     }
     private void ToggleLeftLower(bool toggle)
     {
         leftLowerActive = toggle;
+        if (toggleGravityOnActivate)
+            leftLower.gravityScale = toggle ? 0 : 1;
     }
     private void ToggleRightLower(bool toggle)
     {
         rightLowerActive = toggle;
+        if (toggleGravityOnActivate)
+            rightLower.gravityScale = toggle ? 0 : 1;
     }
     private void ToggleRightUpper(bool toggle)
     {
         rightUpperActive = toggle;
+        if (toggleGravityOnActivate)
+            rightUpper.gravityScale = toggle ? 0 : 1;
     }
     private void ToggleTail(bool toggle)
     {
         tailActive = toggle;
+        if (toggleGravityOnActivate)
+            tail.gravityScale = toggle ? 0 : 1;
     }
 
     private void MoveLimbs(Vector2 movementDelta)

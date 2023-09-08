@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using static UnityEditor.PlayerSettings;
 
 public class KeyPressUI : MonoBehaviour
 {
@@ -12,6 +13,21 @@ public class KeyPressUI : MonoBehaviour
     public Image rightUpperImage;
     public Image rightLowerImage;
     public Image tailImage;
+
+    public Transform leftUpperTransform;
+    public Transform leftLowerTransform;
+    public Transform rightUpperTransform;
+    public Transform rightLowerTransform;
+    public Transform tailTransform;
+
+    private RectTransform leftUpperRTransform;
+    private RectTransform leftLowerRTransform ;
+    private RectTransform rightUpperRTransform;
+    private RectTransform rightLowerRTransform;
+    private RectTransform tailRTransform;
+
+    private Camera camera;
+    public RectTransform canvas;
 
     public Color activeColour;
     [FormerlySerializedAs("attachedcColour")] public Color attachedColour;
@@ -31,6 +47,13 @@ public class KeyPressUI : MonoBehaviour
         PlayerController.OnRightUpperAttached += RightUpperAttached;
         PlayerController.OnRightLowerAttached += RightLowerAttached;
         PlayerController.OnTailAttached += TailAttached;
+
+        leftUpperRTransform = leftUpperImage.GetComponent<RectTransform>();
+        leftLowerRTransform = leftLowerImage.GetComponent<RectTransform>();
+        rightUpperRTransform = rightUpperImage.GetComponent<RectTransform>();
+        rightLowerRTransform = rightLowerImage.GetComponent<RectTransform>();
+        tailRTransform = tailImage.GetComponent<RectTransform>();
+        camera = Camera.main;
     }
 
     void OnDisable()
@@ -46,6 +69,41 @@ public class KeyPressUI : MonoBehaviour
         PlayerController.OnRightUpperAttached -= RightUpperAttached;
         PlayerController.OnRightLowerAttached -= RightLowerAttached;
         PlayerController.OnTailAttached -= TailAttached;
+    }
+
+    public void Update()
+    {
+        if (!canvas || !camera) return;
+        Vector2 screenPosition;
+        if (leftUpperTransform)
+        {
+            screenPosition = camera.WorldToScreenPoint(leftUpperTransform.position);
+            leftUpperRTransform.position = screenPosition;
+        }
+
+        if (leftLowerTransform)
+        {
+            screenPosition = camera.WorldToScreenPoint(leftLowerTransform.position);
+            leftLowerRTransform.position = screenPosition;
+        }
+
+        if (rightUpperTransform)
+        {
+            screenPosition = camera.WorldToScreenPoint(rightUpperTransform.position);
+            rightUpperRTransform.position = screenPosition;
+        }
+
+        if (rightLowerTransform)
+        {
+            screenPosition = camera.WorldToScreenPoint(rightLowerTransform.position);
+            rightLowerRTransform.position = screenPosition;
+        }
+
+        if (tailTransform)
+        {
+            screenPosition = camera.WorldToScreenPoint(tailTransform.position);
+            tailRTransform.position = screenPosition;
+        }
     }
 
     //Show Keys Activated

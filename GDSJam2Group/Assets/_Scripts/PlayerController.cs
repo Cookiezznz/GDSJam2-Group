@@ -106,33 +106,33 @@ public class PlayerController : MonoBehaviour
         
         if (leftUpperActive && !leftUpperAttached)
         {
-            leftUpper.MovePosition(leftUpper.transform.position + (Vector3)limbMovement);
+            leftUpperHand.MovePosition((Vector2)leftUpperHand.transform.position + limbMovement);
         }
 
         if (leftLowerActive && !leftLowerAttached)
         {
-            leftLower.MovePosition((Vector2)leftLower.transform.position + limbMovement);
+            leftLowerHand.MovePosition((Vector2)leftLowerHand.transform.position + limbMovement);
         }
 
         if (rightLowerActive && !rightLowerAttached)
         {
-            rightLower.MovePosition((Vector2)rightLower.transform.position + limbMovement);
+            rightLowerHand.MovePosition((Vector2)rightLowerHand.transform.position + limbMovement);
         }
 
         if (rightUpperActive && !rightUpperAttached)
         {
-            rightUpper.MovePosition((Vector2)rightUpper.transform.position + limbMovement);
+            rightUpperHand.MovePosition((Vector2)rightUpperHand.transform.position + limbMovement);
         }
 
         if (tailActive && !tailAttached)
         {
-            tail.MovePosition((Vector2)tail.transform.position + limbMovement);
+            tailHand.MovePosition((Vector2)tailHand.transform.position + limbMovement);
         }
 
-        //If limb is attached AND active, move the body.
-        if (leftUpperActive && leftUpperAttached || leftLowerActive &&  leftLowerAttached 
-            || rightUpperActive && rightUpperAttached || rightLowerActive && rightLowerAttached
-            || tailActive && tailAttached)
+        //If any limb is attached AND active, move the body.
+        if (leftUpperAttached || leftLowerAttached 
+            || rightUpperAttached || rightLowerAttached
+            || tailAttached)
         {
             body2D.MovePosition((Vector2)transform.position + limbMovement);
         }

@@ -7,6 +7,7 @@ public class CableBehaviour : MonoBehaviour
     public bool electrified;
     public bool alternatesOnOff;
     public float delayBetweenAlternating;
+    public float delayBeforeStart;
     CableLineRenderer cableVisual;
 
     public Material cableMaterial;
@@ -36,6 +37,7 @@ public class CableBehaviour : MonoBehaviour
     {
         electrified = true;
         cableVisual.lineRenderer.material = electrifiedCableMaterial;
+        cableVisual.Electrify();
     }
 
 
@@ -44,6 +46,7 @@ public class CableBehaviour : MonoBehaviour
     {
         electrified = false;
         cableVisual.lineRenderer.material = cableMaterial;
+        cableVisual.Delectrify();
     }
 
 
@@ -67,6 +70,8 @@ public class CableBehaviour : MonoBehaviour
 
     IEnumerator ElectricTick()
     {
+        yield return new WaitForSeconds(delayBeforeStart);
+
         while (alternatesOnOff)
         {
             ToggleElectricity();

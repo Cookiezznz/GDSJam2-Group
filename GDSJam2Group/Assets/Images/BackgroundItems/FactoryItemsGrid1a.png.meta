@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 109327908680b5c4f8b70ddff3647bef
+guid: dcc7602fbcee2304a9fbb41c26885390
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -81,46 +81,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -149,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FactoryItemsGrid1_0
+      name: FactoryItemsGrid1a_0
       rect:
         serializedVersion: 2
         x: 43
@@ -163,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1215fdc4fc3e194ab100bda910f27a5
-      internalID: 565925597
+      spriteID: 1b10e600f43ebc745844e481426c30b4
+      internalID: 146282087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_1
+      name: FactoryItemsGrid1a_1
       rect:
         serializedVersion: 2
         x: 383
@@ -184,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8684777749d51ee4b8fb311806ff9d4e
-      internalID: -1022668901
+      spriteID: 27552d3f6d6073345be2ee5277e772b8
+      internalID: 1748674290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_2
+      name: FactoryItemsGrid1a_2
       rect:
         serializedVersion: 2
         x: 683
@@ -205,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f93efd719e0a2904bb7414a23de22e04
-      internalID: -1145208922
+      spriteID: b882e65114d838e47870b5a57d1d9cb5
+      internalID: -556410262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_3
+      name: FactoryItemsGrid1a_3
       rect:
         serializedVersion: 2
         x: 1003
@@ -226,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1fbfcc19a4ade04b84d8e4772841551
-      internalID: -1034020093
+      spriteID: 18c0c9ebbaec4f34ea6b3fb635fcb1fb
+      internalID: -978422381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_4
+      name: FactoryItemsGrid1a_4
       rect:
         serializedVersion: 2
         x: 1337
@@ -247,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c6051357905fb0458457934ac089c29
-      internalID: -399162928
+      spriteID: b3b3678570e30d44cbb9a11e23b97b50
+      internalID: -1518087066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_5
+      name: FactoryItemsGrid1a_5
       rect:
         serializedVersion: 2
         x: 1672
@@ -268,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dfbdf380bb03d147b2b71a674f09708
-      internalID: -2068095787
+      spriteID: b800c10221ea62a44a0cc903e1e08f45
+      internalID: 469483687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_6
+      name: FactoryItemsGrid1a_6
       rect:
         serializedVersion: 2
         x: 79
@@ -289,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7eee5d5e06c9c664bbb82271478ea3f5
-      internalID: 212976672
+      spriteID: 5c9ba1b60b7509a448e8f348d0de5522
+      internalID: -635652952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_7
+      name: FactoryItemsGrid1a_7
       rect:
         serializedVersion: 2
         x: 366
@@ -310,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a6bb2125fe4b694a90f9a10ebb99d58
-      internalID: 1958841540
+      spriteID: 0d2c1fa178bb942428b3239b0f9b38d7
+      internalID: 1342118245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_8
+      name: FactoryItemsGrid1a_8
       rect:
         serializedVersion: 2
         x: 695
@@ -331,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f80848ac4363a464fa057fa67936fc7e
-      internalID: 399984579
+      spriteID: 18a12db2d187e444e8f1a8216a5ff5d3
+      internalID: 1395412832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_9
+      name: FactoryItemsGrid1a_9
       rect:
         serializedVersion: 2
         x: 1015
@@ -352,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 174410dc5e33df542a555521a805da6b
-      internalID: -1367045608
+      spriteID: c643cc5ff79d00e4d8c65ce2b500d88c
+      internalID: 731143033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_10
+      name: FactoryItemsGrid1a_10
       rect:
         serializedVersion: 2
         x: 1361
@@ -373,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b3ac1b3a7b5c3c408cdc837e8c25489
-      internalID: -425883247
+      spriteID: 1ffb1d95eb592b44d8a1737c7998b586
+      internalID: -275180107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_11
+      name: FactoryItemsGrid1a_11
       rect:
         serializedVersion: 2
         x: 1672
@@ -394,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7f417c4ec3405b4ebdb1e37ed7a38c9
-      internalID: 425003257
+      spriteID: a3c7efff6e4b8814ea8d9d25d4d2b7c3
+      internalID: 678393583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_12
+      name: FactoryItemsGrid1a_12
       rect:
         serializedVersion: 2
         x: 53
@@ -415,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87ddbbbb22f86df45b733dfb8ff44262
-      internalID: -121366557
+      spriteID: c2dcdd092d4ac6341bd14a3cc17f9fa5
+      internalID: 875542247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_13
+      name: FactoryItemsGrid1a_13
       rect:
         serializedVersion: 2
         x: 371
@@ -436,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d92a592575a9ae94aad0f04c8e91b295
-      internalID: -1149075420
+      spriteID: 521b88946aec2c243b0c0eff60b84079
+      internalID: -164310770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_14
+      name: FactoryItemsGrid1a_14
       rect:
         serializedVersion: 2
         x: 703
@@ -457,14 +418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75d7d63a05a150a49b13e14c8781d82e
-      internalID: -1788544010
+      spriteID: 5edb4a78b9e0fb945b4109781ca2adf6
+      internalID: 1025454170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_15
+      name: FactoryItemsGrid1a_15
       rect:
         serializedVersion: 2
         x: 1028
@@ -478,14 +439,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c61732992652af043996985e09821432
-      internalID: 659759617
+      spriteID: 404f5283e8275354d9d0f6a6d863510f
+      internalID: -819366610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_16
+      name: FactoryItemsGrid1a_16
       rect:
         serializedVersion: 2
         x: 1336
@@ -499,14 +460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9c47bb5eec656447a4f413cf3f464f7
-      internalID: 1153561945
+      spriteID: 13bff8e79847ee741805560b493e9fe3
+      internalID: -1907838411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_17
+      name: FactoryItemsGrid1a_17
       rect:
         serializedVersion: 2
         x: 1706
@@ -520,14 +481,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05d243260227d2f44a0e4ba8457a21f8
-      internalID: -768074096
+      spriteID: 10435e53ec007e9448e580ec1566cad8
+      internalID: -378744362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FactoryItemsGrid1_18
+      name: FactoryItemsGrid1a_18
       rect:
         serializedVersion: 2
         x: 93
@@ -541,8 +502,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4fb237afd380fd42b41782bf168639e
-      internalID: -1386948455
+      spriteID: 966ed5b62c484a847a14f9ba8f4571bd
+      internalID: -738864028
       vertices: []
       indices: 
       edges: []
@@ -550,7 +511,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 6a09beb2434940e48b6bf242a92a93aa
     internalID: 0
     vertices: []
     indices: 
@@ -558,25 +519,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      FactoryItemsGrid1_0: 565925597
-      FactoryItemsGrid1_1: -1022668901
-      FactoryItemsGrid1_10: -425883247
-      FactoryItemsGrid1_11: 425003257
-      FactoryItemsGrid1_12: -121366557
-      FactoryItemsGrid1_13: -1149075420
-      FactoryItemsGrid1_14: -1788544010
-      FactoryItemsGrid1_15: 659759617
-      FactoryItemsGrid1_16: 1153561945
-      FactoryItemsGrid1_17: -768074096
-      FactoryItemsGrid1_18: -1386948455
-      FactoryItemsGrid1_2: -1145208922
-      FactoryItemsGrid1_3: -1034020093
-      FactoryItemsGrid1_4: -399162928
-      FactoryItemsGrid1_5: -2068095787
-      FactoryItemsGrid1_6: 212976672
-      FactoryItemsGrid1_7: 1958841540
-      FactoryItemsGrid1_8: 399984579
-      FactoryItemsGrid1_9: -1367045608
+      FactoryItemsGrid1a_0: 146282087
+      FactoryItemsGrid1a_1: 1748674290
+      FactoryItemsGrid1a_10: -275180107
+      FactoryItemsGrid1a_11: 678393583
+      FactoryItemsGrid1a_12: 875542247
+      FactoryItemsGrid1a_13: -164310770
+      FactoryItemsGrid1a_14: 1025454170
+      FactoryItemsGrid1a_15: -819366610
+      FactoryItemsGrid1a_16: -1907838411
+      FactoryItemsGrid1a_17: -378744362
+      FactoryItemsGrid1a_18: -738864028
+      FactoryItemsGrid1a_2: -556410262
+      FactoryItemsGrid1a_3: -978422381
+      FactoryItemsGrid1a_4: -1518087066
+      FactoryItemsGrid1a_5: 469483687
+      FactoryItemsGrid1a_6: -635652952
+      FactoryItemsGrid1a_7: 1342118245
+      FactoryItemsGrid1a_8: 1395412832
+      FactoryItemsGrid1a_9: 731143033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

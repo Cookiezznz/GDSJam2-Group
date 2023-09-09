@@ -30,8 +30,12 @@ public class KeyPressUI : MonoBehaviour
     public RectTransform canvas;
 
     public Color activeColour;
-    [FormerlySerializedAs("attachedcColour")] public Color attachedColour;
+    public Sprite activeSprite;
+
+    public Color attachedColour;
+
     public Color inactiveColour;
+    public Sprite inactiveSprite;
 
     //Event Subscriptions
     void OnEnable()
@@ -120,6 +124,7 @@ public class KeyPressUI : MonoBehaviour
         //if not attached, turn inactive.
         if(leftUpperImage.color != attachedColour)
         leftUpperImage.color = toggle ? activeColour : inactiveColour;
+        leftUpperImage.sprite = toggle ? activeSprite : inactiveSprite;
     }
 
     public void ShowKeyLeftLower(bool toggle)
@@ -127,6 +132,7 @@ public class KeyPressUI : MonoBehaviour
         //if not attached, turn inactive.
         if(leftLowerImage.color != attachedColour)
         leftLowerImage.color = toggle ? activeColour : inactiveColour;
+        leftLowerImage.sprite = toggle ? activeSprite : inactiveSprite;
     }
 
     public void ShowKeyRightLower(bool toggle)
@@ -134,6 +140,7 @@ public class KeyPressUI : MonoBehaviour
         //if not attached, turn inactive.
         if(rightLowerImage.color != attachedColour)
         rightLowerImage.color = toggle ? activeColour : inactiveColour;
+        rightLowerImage.sprite = toggle ? activeSprite : inactiveSprite;
     }
 
     public void ShowKeyRightUpper(bool toggle)
@@ -141,6 +148,7 @@ public class KeyPressUI : MonoBehaviour
         //if not attached, turn inactive.
         if(rightUpperImage.color != attachedColour)
             rightUpperImage.color = toggle ? activeColour : inactiveColour;
+            rightUpperImage.sprite = toggle ? activeSprite : inactiveSprite;
     }
 
     public void ShowKeyTail(bool toggle)
@@ -148,6 +156,7 @@ public class KeyPressUI : MonoBehaviour
         //if not attached, turn inactive.
         if(tailImage.color != attachedColour)
             tailImage.color = toggle ? activeColour : inactiveColour;
+        tailImage.sprite = toggle ? activeSprite : inactiveSprite;
     }
 
     //Show Attachments

@@ -3152,7 +3152,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.330574, y: 2.88231, z: -10}
+  m_LocalPosition: {x: 2.3443012, y: 2.88229, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14410,6 +14410,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <IsPaused>k__BackingField: 0
+  currentStage: 1
+  numberOfStages: 3
   cables:
   - {fileID: 1540958143}
   - {fileID: 851700410}

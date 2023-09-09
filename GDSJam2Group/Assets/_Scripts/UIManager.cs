@@ -13,28 +13,30 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if(GameStateManager.Instance != null)
-            GameStateManager.OnGameOver += OnGameOver;
+        GameStateManager.OnGameOver += OnGameOver;
+        GameStateManager.OnPaused += OnPaused;
     }
     
     private void OnDisable()
     {
-        if(GameStateManager.Instance != null)
-            GameStateManager.OnGameOver -= OnGameOver;
+        GameStateManager.OnGameOver -= OnGameOver;
+        GameStateManager.OnPaused -= OnPaused;
+
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        GameStateManager.OnGameOver += OnGameOver;
-    }
-    
     void OnGameOver()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         menu.SetActive(true);
         gameOverScreen.SetActive(true);
         gameOverWinLossText.text = GameStateManager.Instance.GetGameState().isVictorious ? "Victory" : "Defeat";
         gameOverScore.text = GameStateManager.Instance.GetGameState().score.ToString("00.00");
+    }
+
+    void OnPaused(bool toggle)
+    {
+
+        Cursor.lockState = toggle ? CursorLockMode.Confined : CursorLockMode.Locked;
     }
     
 }

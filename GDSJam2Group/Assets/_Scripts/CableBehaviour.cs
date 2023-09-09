@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,9 +13,7 @@ public class CableBehaviour : MonoBehaviour
 
     public Material cableMaterial;
     public Material electrifiedCableMaterial;
-
-
-
+    
     private void Start()
     {
         cableVisual = GetComponent<CableLineRenderer>();

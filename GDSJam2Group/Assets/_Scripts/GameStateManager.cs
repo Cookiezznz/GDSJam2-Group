@@ -20,11 +20,14 @@ public class GameStateManager : Singleton<GameStateManager>
     
     public static event Action OnGameOver;
     public static event Action OnGameStart;
+    public static event Action<bool> OnPaused;
 
-    public int currentStage;
+    public int currentStage = 1;
+    public int numberOfStages;
     public static event Action<int> StageStarted;
 
     public List<CableLineRenderer> cables;
+
 
     void OnEnable()
     {
@@ -44,6 +47,11 @@ public class GameStateManager : Singleton<GameStateManager>
     public void NextStage(int numberOfFabrications)
     {
         currentStage++;
+        if (currentStage > numberOfStages)
+        {
+            GameOver(true);
+            return;
+        }
         StageStarted?.Invoke(currentStage);
     }
 
@@ -76,12 +84,14 @@ public class GameStateManager : Singleton<GameStateManager>
     {
         Time.timeScale = 0;
         IsPaused = true;
+        OnPaused?.Invoke(IsPaused);
     }
     
     public void ResumeGame()
     {
         Time.timeScale = 1;
         IsPaused = false;
+        OnPaused?.Invoke(IsPaused);
     }
 
     public void GameOver(bool isVictory)

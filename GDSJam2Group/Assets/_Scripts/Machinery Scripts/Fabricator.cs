@@ -27,6 +27,7 @@ public class Fabricator : MonoBehaviour
         {
             Destroy(collision.gameObject);
             fabrications++;
+            OnFabricated?.Invoke(fabrications);
             SpawnReward();
         }
     }
@@ -35,7 +36,7 @@ public class Fabricator : MonoBehaviour
     {
 
         reward = Instantiate(banana, output.position, output.rotation, propsHolder);
-        OnFabricated?.Invoke(fabrications);
+        
 
     }
 }

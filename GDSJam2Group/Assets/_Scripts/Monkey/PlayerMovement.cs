@@ -218,7 +218,7 @@ public class PlayerMovement : MonoBehaviour
         List<RaycastHit2D> grabHits;
         
         grabHits = Physics2D.CircleCastAll(hand.transform.position, grabRadius,
-            Vector2.zero, 0, LayerMask.GetMask("Grabable")).ToList();
+            Vector2.zero, 0, LayerMask.GetMask("Grabable", "Grating")).ToList();
         
         foreach (var hit in grabHits)
         {

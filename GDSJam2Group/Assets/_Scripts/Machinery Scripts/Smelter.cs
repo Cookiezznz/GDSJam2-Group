@@ -17,22 +17,21 @@ public class Smelter : MonoBehaviour
 
     private void OnEnable()
     {
-        PickupRespawner.RefinedRespawn += RespawnRefined;
+        PickupRespawner.RefinedRespawn += SpawnRefined;
     }
 
     private void OnDisable()
     {
-        PickupRespawner.RefinedRespawn -= RespawnRefined;
+        PickupRespawner.RefinedRespawn -= SpawnRefined;
     }
-
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Checks if the inputed object is scrap - if so destroys the scrap and attempts to dispense refined metal
-        if(collision.tag == "scrap")
+        Prop prop = collision.GetComponent<Prop>();
+        if(prop.prop == Prop.Props.Scrap)
         {
-            Debug.Log("Scrap inputed into smelter.");
-            GameObject.Destroy(collision.gameObject);
+            Destroy(collision.gameObject);
             SpawnRefined();
         }
     }
@@ -40,10 +39,9 @@ public class Smelter : MonoBehaviour
     public void SpawnRefined()
     {
         // Checks that there are no other instances of refined metal before despensing then spawns a new refined metal.
-        if(currentRefined == null)
+        if(currentRefined is null)
         {
-            currentRefined = GameObject.Instantiate(refined, output.position, output.rotation);
-            Debug.Log("Dispensed Refined Metal");
+            currentRefined = Instantiate(refined, output.position, output.rotation);
             InvokeSmelted();
         }
         else
@@ -51,11 +49,6 @@ public class Smelter : MonoBehaviour
             Debug.Log("Tried to dispense refined metal, but some already exists!");
         }
         
-    }
-
-    void RespawnRefined()
-    {
-        SpawnRefined();
     }
 
     public static void InvokeSmelted()

@@ -18,14 +18,14 @@ public class Dispenser : MonoBehaviour
 
     private void OnEnable()
     {
-        Fabricator.OnFabricated += RespawnScrap;
-        PickupRespawner.ScrapRespawn += RespawnScrap;
+        Fabricator.OnFabricated += SpawnScrap;
+        PickupRespawner.ScrapRespawn += SpawnScrap;
     }
 
     private void OnDisable()
     {
-        Fabricator.OnFabricated -= RespawnScrap;
-        PickupRespawner.ScrapRespawn -= RespawnScrap;
+        Fabricator.OnFabricated -= SpawnScrap;
+        PickupRespawner.ScrapRespawn -= SpawnScrap;
     }
 
     private void Start()
@@ -33,19 +33,13 @@ public class Dispenser : MonoBehaviour
         SpawnScrap();
     }
 
-    private void RespawnScrap()
-    {
-        SpawnScrap();
-    }
-
     public void SpawnScrap()
     {
         //just creates a new scrap gameobject if there is not already an existing one
-        if(currentScrap == null)
+        if(currentScrap is null)
         {
-            currentScrap = GameObject.Instantiate(scrap, output.position, output.rotation);
-            Debug.Log("Scrap Spawned");
-            InvokeDispensed();
+            currentScrap = Instantiate(scrap, output.position, output.rotation);
+            OnDispensed?.Invoke();
             
         }
         else
@@ -56,11 +50,4 @@ public class Dispenser : MonoBehaviour
     }
 
 
-    public static void InvokeDispensed()
-    {
-        Debug.Log("Dispenser Event called.");
-        OnDispensed?.Invoke();
-    }
-
-    
 }

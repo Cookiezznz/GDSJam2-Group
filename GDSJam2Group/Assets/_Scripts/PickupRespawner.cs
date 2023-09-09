@@ -12,12 +12,12 @@ public class PickupRespawner : MonoBehaviour
 
     private void OnEnable()
     {
-        Pickup.PickupDestroyed += RespawnPickup;
+        Prop.PickupDestroyed += RespawnPickup;
     }
 
     private void OnDisable()
     {
-        Pickup.PickupDestroyed += RespawnPickup;
+        Prop.PickupDestroyed += RespawnPickup;
     }
 
 

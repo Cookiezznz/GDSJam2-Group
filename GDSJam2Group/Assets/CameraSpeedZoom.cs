@@ -6,7 +6,7 @@ using UnityEngine.Serialization;
 
 public class CameraSpeedZoom : MonoBehaviour
 {
-    public CinemachineVirtualCamera camera;
+    public CinemachineVirtualCamera vCam;
     public Vector2 orthoRange;
     public Vector2 speedRange;
     public AnimationCurve speedToZoomCurve;
@@ -14,9 +14,33 @@ public class CameraSpeedZoom : MonoBehaviour
     public float minStep;
     public float smoothing;
 
+    void OnEnable()
+    {
+        PlayerController.OnMonkeyExpired += ClearTarget;
+        MonkeyManager.OnMonkeySpawned += AquireTarget;
+    }
+    void OnDisable()
+    {
+        PlayerController.OnMonkeyExpired -= ClearTarget;
+        MonkeyManager.OnMonkeySpawned -= AquireTarget;
+    }
+
+    void ClearTarget()
+    {
+        target = null;
+    }
+
+    void AquireTarget(GameObject newTarget)
+    {
+        target = newTarget.GetComponent<Rigidbody2D>();
+        vCam.Follow = target.transform;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (target == null) return;
+
         // Speed of target
         float currentSpeed = target.velocity.magnitude;
         
@@ -25,7 +49,7 @@ public class CameraSpeedZoom : MonoBehaviour
         
         // Evaluate the animation curve to get the orthographic size within the OrthoRange
         float orthoSize = Mathf.Lerp(orthoRange.x, orthoRange.y, speedToZoomCurve.Evaluate(speedNormalized));
-        float currentOrthoSize = camera.m_Lens.OrthographicSize;
+        float currentOrthoSize = vCam.m_Lens.OrthographicSize;
 
         float amountToMove = Mathf.Abs(currentOrthoSize - orthoSize);
         
@@ -36,7 +60,7 @@ public class CameraSpeedZoom : MonoBehaviour
             orthoSize = currentOrthoSize + (currentOrthoSize - orthoSize > 0 ? -smoothing : smoothing);
         }
 
-        // Assign the calculated orthographic size to the camera
-        camera.m_Lens.OrthographicSize = orthoSize;   
+        // Assign the calculated orthographic size to the vCam
+        vCam.m_Lens.OrthographicSize = orthoSize;   
     }
 }

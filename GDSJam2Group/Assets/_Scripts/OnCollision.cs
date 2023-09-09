@@ -6,16 +6,34 @@ using UnityEngine.Events;
 
 public class OnCollision : MonoBehaviour
 {
-    public UnityEvent onCollisionEnter;
-    private void OnCollisionEnter(Collision other)
+    public string[] collisionTags;
+
+    public UnityEvent<string> onCollisionEnter;
+
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        onCollisionEnter?.Invoke();
+        string hitTag = other.gameObject.tag;
+        foreach (string tag in collisionTags)
+        {
+            if (tag == hitTag)
+            {
+                onCollisionEnter?.Invoke(tag);
+            }
+        }
+        
     }
     
-    public UnityEvent onCollisionExit;
-    private void OnCollisionExit(Collision other)
-    {
-        onCollisionExit?.Invoke();
+    public UnityEvent<string> onCollisionExit;
 
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        string hitTag = other.gameObject.tag;
+        foreach (string tag in collisionTags)
+        {
+            if (tag == hitTag)
+            {
+                onCollisionExit?.Invoke(tag);
+            }
+        }
     }
 }

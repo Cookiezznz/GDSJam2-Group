@@ -264,6 +264,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -274,6 +279,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 14.931
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -283,6 +293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -968,6 +983,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -978,6 +998,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 42.721
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -987,6 +1012,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483653076682848188, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -1364,15 +1394,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 1.184
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_Name
       value: Cable (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -2907,7 +2952,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3512177, y: -1.29578, z: -10}
+  m_LocalPosition: {x: 2.349547, y: -1.29578, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2999,6 +3044,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -3009,10 +3059,20 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 12.721
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_Name
       value: Cable (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -4151,6 +4211,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -4161,6 +4226,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 27.011002
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -4170,6 +4240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483653076682848188, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -4810,6 +4885,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -4820,6 +4900,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 27.011002
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -4829,6 +4914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483653076682848188, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -4906,6 +4996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 529015235}
   - component: {fileID: 529015236}
+  - component: {fileID: 529015237}
   m_Layer: 7
   m_Name: ClimableGrating (4)
   m_TagString: Untagged
@@ -4981,6 +5072,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &529015237
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529015234}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &529713041
 GameObject:
   m_ObjectHideFlags: 0
@@ -5033,10 +5169,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_Name
       value: Cable
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -6190,9 +6341,9 @@ Transform:
   m_GameObject: {fileID: 618649332}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.05, y: 0.65, z: 0}
-  m_LocalScale: {x: 2.1, y: 4.47, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -7.3, y: -2.18, z: 0}
+  m_LocalScale: {x: 0.21, y: 0.447, z: 0.1}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1244712838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6237,9 +6388,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
-  m_Color: {r: 0, g: 0.509434, b: 0.13290745, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 65850649fc69e134d80d8949ecea8d5a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6285,7 +6435,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 20, y: 20}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6644,6 +6794,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -6654,6 +6809,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 14.931
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -6663,6 +6823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -7007,6 +7172,7 @@ GameObject:
   m_Component:
   - component: {fileID: 794758176}
   - component: {fileID: 794758177}
+  - component: {fileID: 794758178}
   m_Layer: 7
   m_Name: ClimableGrating (3)
   m_TagString: Untagged
@@ -7082,6 +7248,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &794758178
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794758175}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &803433080
 GameObject:
   m_ObjectHideFlags: 0
@@ -7837,6 +8048,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -7847,6 +8063,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 42.721
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -7856,6 +8077,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483653076682848188, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -7931,10 +8157,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: 3.2440002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -7945,6 +8181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -8928,6 +9169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 900011126}
   - component: {fileID: 900011127}
+  - component: {fileID: 900011128}
   m_Layer: 7
   m_Name: ClimableGrating (5)
   m_TagString: Untagged
@@ -9003,6 +9245,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &900011128
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900011125}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &901942633
 GameObject:
   m_ObjectHideFlags: 0
@@ -10231,6 +10518,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -10241,6 +10533,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 27.011002
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -10250,6 +10547,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483653076682848188, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -10583,6 +10885,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -10593,6 +10900,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 20.255001
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -10602,6 +10914,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483653076682848188, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -10889,6 +11206,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -10899,6 +11221,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 27.011002
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -10908,6 +11235,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483653076682848188, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -11134,9 +11466,9 @@ Transform:
   m_GameObject: {fileID: 1102245803}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.41, y: 5.66, z: 0}
-  m_LocalScale: {x: 6.2914786, y: 5.313146, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 21.96, y: 5.89, z: 0}
+  m_LocalScale: {x: 0.17, y: 0.1435648, z: 0.027020676}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1244712838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11181,9 +11513,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
-  m_Color: {r: 0.745283, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8c98dfe78a1e15b4080010d63a88511f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11229,7 +11560,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 72, y: 54}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11964,6 +12295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1214314969}
   - component: {fileID: 1214314970}
+  - component: {fileID: 1214314971}
   m_Layer: 7
   m_Name: ClimableGrating (1)
   m_TagString: Untagged
@@ -12039,6 +12371,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1214314971
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214314968}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1215713652
 GameObject:
   m_ObjectHideFlags: 0
@@ -12367,7 +12744,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 164531600}
+  - {fileID: 1391792027}
   - {fileID: 408008922}
   - {fileID: 1945011454}
   - {fileID: 972169005}
@@ -12772,6 +13149,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1289822911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289822912}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1289822912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289822911}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.9, y: -3.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1391792027}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1296958877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14732,6 +15140,57 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1391792026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1391792027}
+  - component: {fileID: 1391792028}
+  m_Layer: 0
+  m_Name: MonkeyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1391792027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391792026}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 164531600}
+  - {fileID: 1289822912}
+  m_Father: {fileID: 1244712838}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1391792028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391792026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d2b3227fba0d5a419df3d43e75cab65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnTimer: 1
+  monkeysExpired: 0
+  respawnPoint: {fileID: 1289822912}
+  monkeyPrefab: {fileID: 1947420217711730452, guid: 9ee21790b600b8e438c7d688c0b1a569,
+    type: 3}
 --- !u!1 &1406942662
 GameObject:
   m_ObjectHideFlags: 0
@@ -15348,6 +15807,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -15358,10 +15822,20 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 12.721
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_Name
       value: Cable (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -15563,6 +16037,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -15573,6 +16052,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 12.721
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -15582,6 +16066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -15797,6 +16286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1470723956}
   - component: {fileID: 1470723957}
+  - component: {fileID: 1470723958}
   m_Layer: 7
   m_Name: ClimableGrating (6)
   m_TagString: Untagged
@@ -15872,6 +16362,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1470723958
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470723955}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1475779989
 GameObject:
   m_ObjectHideFlags: 0
@@ -16672,9 +17207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6467b4f18dccb49b83f34ea8187cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1566786445}
-  orthoRange: {x: 10, y: 30}
-  speedRange: {x: 0, y: 20}
+  vCam: {fileID: 1566786445}
+  orthoRange: {x: 10, y: 20}
+  speedRange: {x: 4, y: 20}
   speedToZoomCurve:
     serializedVersion: 2
     m_Curve:
@@ -16688,7 +17223,7 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.23063178
+      time: 0.3306318
       value: 0.0013360446
       inSlope: 0.026997155
       outSlope: 0.026997155
@@ -16710,7 +17245,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   target: {fileID: 164531603}
   minStep: 0.1
-  smoothing: 1
+  smoothing: 0.1
 --- !u!1 &1577591346
 GameObject:
   m_ObjectHideFlags: 0
@@ -17400,6 +17935,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -17410,6 +17950,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 20.255001
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -17419,6 +17964,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483653076682848188, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -18436,6 +18986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1808873445}
   - component: {fileID: 1808873446}
+  - component: {fileID: 1808873447}
   m_Layer: 7
   m_Name: ClimableGrating (2)
   m_TagString: Untagged
@@ -18511,6 +19062,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1808873447
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808873444}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1811789106
 GameObject:
   m_ObjectHideFlags: 0
@@ -18521,6 +19117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1811789107}
   - component: {fileID: 1811789108}
+  - component: {fileID: 1811789109}
   m_Layer: 7
   m_Name: ClimableGrating
   m_TagString: Untagged
@@ -18596,6 +19193,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1811789109
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811789106}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1815633151
 GameObject:
   m_ObjectHideFlags: 0
@@ -18840,9 +19482,9 @@ Transform:
   m_GameObject: {fileID: 1820931807}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.72, y: 27.98, z: 0}
-  m_LocalScale: {x: 6.2914786, y: 5.313146, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -5.29, y: 26.97, z: 0}
+  m_LocalScale: {x: 0.24, y: 0.20267971, z: 0.038146835}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1244712838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18887,9 +19529,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
-  m_Color: {r: 0.8018868, g: 0.7472076, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 75fe31556e4282e4da31b7de9294860a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -18935,7 +19576,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 72, y: 54}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -19084,7 +19725,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1850034673}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19786,6 +20427,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -19796,10 +20442,20 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 14.931
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_Name
       value: Cable (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -20168,6 +20824,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -20178,6 +20839,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 20.255001
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -20187,6 +20853,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483653076682848188, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -20396,6 +21067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952276855}
   - component: {fileID: 1952276856}
+  - component: {fileID: 1952276857}
   m_Layer: 7
   m_Name: ClimableGrating (7)
   m_TagString: Untagged
@@ -20471,6 +21143,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1952276857
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952276854}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!4 &1954812290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1048193331374716999, guid: 9ee21790b600b8e438c7d688c0b1a569,
@@ -20570,6 +21287,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -20580,10 +21302,20 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 14.931
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_Name
       value: Cable (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -20654,6 +21386,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -20664,6 +21401,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 42.721
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -20673,6 +21415,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8483653076682848188, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -21631,6 +22378,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1850034673}
     m_Modifications:
+    - target: {fileID: 1199721683231811607, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1398485104550668552, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -21641,6 +22393,11 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: 12.721
       objectReference: {fileID: 0}
+    - target: {fileID: 4341957078627841374, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4895656676201435002, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
       propertyPath: cableLengthHidden
@@ -21650,6 +22407,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cable (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7254977774213628496, guid: f8d1f9d561a21134da7ed56cd44b4c14,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8866840888482783432, guid: f8d1f9d561a21134da7ed56cd44b4c14,
         type: 3}
@@ -22012,235 +22774,12 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1244712838}
+    m_TransformParent: {fileID: 1391792027}
     m_Modifications:
-    - target: {fileID: 359458410823962168, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -744501943, guid: 5b3e8925e5ff84b4294499564a8b893f,
-        type: 3}
-    - target: {fileID: 611921710342439467, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -556928263, guid: 5b3e8925e5ff84b4294499564a8b893f,
-        type: 3}
-    - target: {fileID: 1326789365160180911, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.040999983
-      objectReference: {fileID: 0}
-    - target: {fileID: 1326789365160180911, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.41899982
-      objectReference: {fileID: 0}
     - target: {fileID: 1947420217711730452, guid: 9ee21790b600b8e438c7d688c0b1a569,
         type: 3}
       propertyPath: m_Name
-      value: PlayerBody
-      objectReference: {fileID: 0}
-    - target: {fileID: 2832888193097949275, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Anchor.x
-      value: 0.07772891
-      objectReference: {fileID: 0}
-    - target: {fileID: 2832888193097949275, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Anchor.y
-      value: 0.44401166
-      objectReference: {fileID: 0}
-    - target: {fileID: 2832888193097949275, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.38580623
-      objectReference: {fileID: 0}
-    - target: {fileID: 2832888193097949275, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.03344495
-      objectReference: {fileID: 0}
-    - target: {fileID: 3487051160892572857, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Anchor.x
-      value: 0.07073555
-      objectReference: {fileID: 0}
-    - target: {fileID: 3487051160892572857, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Anchor.y
-      value: 0.44004682
-      objectReference: {fileID: 0}
-    - target: {fileID: 3487051160892572857, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.6028293
-      objectReference: {fileID: 0}
-    - target: {fileID: 3487051160892572857, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.085562296
-      objectReference: {fileID: 0}
-    - target: {fileID: 3858380878818650700, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -556928263, guid: 5b3e8925e5ff84b4294499564a8b893f,
-        type: 3}
-    - target: {fileID: 4461812934558968084, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.814
-      objectReference: {fileID: 0}
-    - target: {fileID: 4461812934558968084, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.281
-      objectReference: {fileID: 0}
-    - target: {fileID: 5194301806123965595, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.013000054
-      objectReference: {fileID: 0}
-    - target: {fileID: 5194301806123965595, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.38199988
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768600888025998239, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.0019999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768600888025998239, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.39299992
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881176551255073926, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.010999645
-      objectReference: {fileID: 0}
-    - target: {fileID: 6378167529527304315, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Anchor.x
-      value: 0.05584901
-      objectReference: {fileID: 0}
-    - target: {fileID: 6378167529527304315, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Anchor.y
-      value: 0.4404356
-      objectReference: {fileID: 0}
-    - target: {fileID: 6378167529527304315, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.5090455
-      objectReference: {fileID: 0}
-    - target: {fileID: 6378167529527304315, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: 0.041653495
-      objectReference: {fileID: 0}
-    - target: {fileID: 6531262061615088980, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.492727
-      objectReference: {fileID: 0}
-    - target: {fileID: 7723453815123422508, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Anchor.x
-      value: -0.0840358
-      objectReference: {fileID: 0}
-    - target: {fileID: 7723453815123422508, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_Anchor.y
-      value: 0.45942432
-      objectReference: {fileID: 0}
-    - target: {fileID: 7723453815123422508, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 0.40337044
-      objectReference: {fileID: 0}
-    - target: {fileID: 7723453815123422508, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.08187144
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370784903013126607, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.119
-      objectReference: {fileID: 0}
-    - target: {fileID: 8370784903013126607, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.324
-      objectReference: {fileID: 0}
-    - target: {fileID: 8510204427786135985, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 8510204427786135985, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 8510204427786135985, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 8510204427786135985, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.32700008
-      objectReference: {fileID: 0}
-    - target: {fileID: 8510204427786135985, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.4580001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8510204427786135985, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.98797
-      objectReference: {fileID: 0}
-    - target: {fileID: 8510204427786135985, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.15464595
-      objectReference: {fileID: 0}
-    - target: {fileID: 8510204427786135985, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -17.793
-      objectReference: {fileID: 0}
-    - target: {fileID: 8574267505425185444, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 8574267505425185444, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 8574267505425185444, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 8574267505425185444, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.623
-      objectReference: {fileID: 0}
-    - target: {fileID: 8574267505425185444, guid: 9ee21790b600b8e438c7d688c0b1a569,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.449
+      value: Monkey
       objectReference: {fileID: 0}
     - target: {fileID: 8754660415256894622, guid: 9ee21790b600b8e438c7d688c0b1a569,
         type: 3}
@@ -22265,17 +22804,17 @@ PrefabInstance:
     - target: {fileID: 8754660415256894622, guid: 9ee21790b600b8e438c7d688c0b1a569,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8754660415256894622, guid: 9ee21790b600b8e438c7d688c0b1a569,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8754660415256894622, guid: 9ee21790b600b8e438c7d688c0b1a569,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8754660415256894622, guid: 9ee21790b600b8e438c7d688c0b1a569,
         type: 3}
@@ -22292,10 +22831,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8108635056306965497, guid: 9ee21790b600b8e438c7d688c0b1a569, type: 3}
-    - {fileID: 8796801731542892012, guid: 9ee21790b600b8e438c7d688c0b1a569, type: 3}
-    - {fileID: 1867790540209748583, guid: 9ee21790b600b8e438c7d688c0b1a569, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

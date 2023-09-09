@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3645468679089117083}
   - component: {fileID: 5907686424620725674}
   - component: {fileID: 1166333235026155988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 2631414150506982051}
   - component: {fileID: 1398485104550668552}
   - component: {fileID: 4720143036774169243}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CablePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 5.754, y: 3.981}
+  m_ConnectedAnchor: {x: 2.6547003, y: -1.559}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -322,7 +322,7 @@ GameObject:
   - component: {fileID: 2710767910506213432}
   - component: {fileID: 4895656676201435002}
   - component: {fileID: 8483653076682848188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cable
   m_TagString: Untagged
   m_Icon: {fileID: 0}

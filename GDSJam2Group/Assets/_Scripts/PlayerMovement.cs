@@ -5,8 +5,9 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
+    public PlayerController controller;
     [Header("Stats")]
     public float limbMovementSpeed;
     public float limbMaxSpeed;
@@ -111,7 +112,8 @@ public class PlayerController : MonoBehaviour
 
     private void MoveLimbs(Vector2 movementDelta)
     {
-        
+        if (controller.monkeyExpired) return;
+
         float limbSpeed = Mathf.Min(limbMovementSpeed * movementDelta.magnitude, limbMaxSpeed);
         Vector2 limbMovement = limbSpeed * Time.fixedDeltaTime * movementDelta.normalized;
         

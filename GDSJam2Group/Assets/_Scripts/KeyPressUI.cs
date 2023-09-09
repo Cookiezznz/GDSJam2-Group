@@ -42,17 +42,21 @@ public class KeyPressUI : MonoBehaviour
         InputManager.onRightLower += ShowKeyRightLower;
         InputManager.onTail += ShowKeyTail;
         
-        PlayerController.OnLeftUpperAttached += LeftUpperAttached;
-        PlayerController.OnLeftLowerAttached += LeftLowerAttached;
-        PlayerController.OnRightUpperAttached += RightUpperAttached;
-        PlayerController.OnRightLowerAttached += RightLowerAttached;
-        PlayerController.OnTailAttached += TailAttached;
+        PlayerMovement.OnLeftUpperAttached += LeftUpperAttached;
+        PlayerMovement.OnLeftLowerAttached += LeftLowerAttached;
+        PlayerMovement.OnRightUpperAttached += RightUpperAttached;
+        PlayerMovement.OnRightLowerAttached += RightLowerAttached;
+        PlayerMovement.OnTailAttached += TailAttached;
 
         leftUpperRTransform = leftUpperImage.GetComponent<RectTransform>();
         leftLowerRTransform = leftLowerImage.GetComponent<RectTransform>();
         rightUpperRTransform = rightUpperImage.GetComponent<RectTransform>();
         rightLowerRTransform = rightLowerImage.GetComponent<RectTransform>();
         tailRTransform = tailImage.GetComponent<RectTransform>();
+
+        PlayerController.OnMonkeyExpired += ClearAllKeys;
+        MonkeyManager.OnMonkeySpawned += ReattachKeys;
+
         camera = Camera.main;
     }
 
@@ -63,12 +67,16 @@ public class KeyPressUI : MonoBehaviour
         InputManager.onRightUpper -= ShowKeyRightUpper;
         InputManager.onRightLower -= ShowKeyRightLower;
         InputManager.onTail -= ShowKeyTail;
-        
-        PlayerController.OnLeftUpperAttached -= LeftUpperAttached;
-        PlayerController.OnLeftLowerAttached -= LeftLowerAttached;
-        PlayerController.OnRightUpperAttached -= RightUpperAttached;
-        PlayerController.OnRightLowerAttached -= RightLowerAttached;
-        PlayerController.OnTailAttached -= TailAttached;
+        PlayerController.OnMonkeyExpired -= ClearAllKeys;
+
+
+        PlayerMovement.OnLeftUpperAttached -= LeftUpperAttached;
+        PlayerMovement.OnLeftLowerAttached -= LeftLowerAttached;
+        PlayerMovement.OnRightUpperAttached -= RightUpperAttached;
+        PlayerMovement.OnRightLowerAttached -= RightLowerAttached;
+        PlayerMovement.OnTailAttached -= TailAttached;
+
+        MonkeyManager.OnMonkeySpawned += ReattachKeys;
     }
 
     public void Update()
@@ -167,5 +175,42 @@ public class KeyPressUI : MonoBehaviour
     {
         //If detaching, revert to active or not
         tailImage.color = toggle ? attachedColour : InputManager.Instance.tail ? activeColour : inactiveColour;
+    }
+
+    public void ClearAllKeys()
+    {
+        if (canvas)
+        {
+            leftUpperImage.gameObject.SetActive(false);
+            leftLowerImage.gameObject.SetActive(false);
+            rightUpperImage.gameObject.SetActive(false);
+            rightLowerImage.gameObject.SetActive(false);
+            tailImage.gameObject.SetActive(false);
+        }
+
+        leftUpperImage.color = inactiveColour;
+        leftLowerImage.color = inactiveColour;
+        rightUpperImage.color = inactiveColour;
+        rightLowerImage.color = inactiveColour;
+        tailImage.color = inactiveColour;
+    }
+
+    public void ReattachKeys(GameObject newMonkey)
+    {
+        PlayerMovement movement = newMonkey.GetComponent<PlayerMovement>();
+        leftUpperTransform = movement.leftUpperHand.transform;
+        leftLowerTransform = movement.leftLowerHand.transform;
+        rightUpperTransform = movement.rightUpperHand.transform;
+        rightLowerTransform = movement.rightLowerHand.transform;
+        tailTransform = movement.tailHand.transform;
+
+        if (canvas)
+        {
+            leftUpperImage.gameObject.SetActive(true);
+            leftLowerImage.gameObject.SetActive(true);
+            rightUpperImage.gameObject.SetActive(true);
+            rightLowerImage.gameObject.SetActive(true);
+            tailImage.gameObject.SetActive(true);
+        }
     }
 }

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8893413063816342658}
   - component: {fileID: 7211541409240723626}
+  - component: {fileID: 5458027165604052265}
+  - component: {fileID: 4175107153121536704}
   m_Layer: 6
   m_Name: Hat
   m_TagString: Player
@@ -84,6 +86,89 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &5458027165604052265
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270595814516599430}
+  m_BodyType: 0
+  m_Simulated: 0
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &4175107153121536704
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270595814516599430}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.38, y: 0.3}
+    newSize: {x: 0.37, y: 0.35}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.019694488, y: 0.14537959}
+      - {x: -0.09382868, y: 0.13382867}
+      - {x: -0.15303668, y: 0.05458771}
+      - {x: -0.19, y: -0.14999999}
+      - {x: -0.10615236, y: -0.14889745}
+      - {x: -0.040157903, y: -0.10565031}
+      - {x: 0.016938247, y: -0.09387623}
+      - {x: 0.16920827, y: 0.0015509035}
+      - {x: 0.19639017, y: 0.064446166}
+      - {x: 0.17382868, y: 0.10613875}
+      - {x: 0.10303694, y: 0.13382854}
+  m_UseDelaunayMesh: 0
 --- !u!1 &298909751240458720
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +380,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 8625557598338124771}
+  hat: {fileID: 5458027165604052265}
+  hatForce: 10
+  hatTorque: 10
   monkeyExpired: 0
   expiryDelay: 0.5
 --- !u!114 &8625557598338124771

@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class PlayerController : MonoBehaviour
 {
     public PlayerMovement movement;
+    public ParticleSystem bananasPS;
     public Rigidbody2D hat;
     public float hatForce;
     public float hatTorque;
@@ -39,6 +40,9 @@ public class PlayerController : MonoBehaviour
         hat.AddForce(dir * hatForce, ForceMode2D.Impulse);
         hat.AddTorque(dir.x > 0 ? hatTorque : -hatTorque);
         hat.gameObject.layer = default;
+
+        bananasPS.transform.parent = null;
+        bananasPS.Play();
 
         yield return new WaitForSeconds(expiryDelay);
 

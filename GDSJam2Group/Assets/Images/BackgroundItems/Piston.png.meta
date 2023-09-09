@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 34e8b9facb0974247812def528e24495
+guid: 66c88000375337946bcaf24ba5281d85
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,13 +43,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 40, y: 36, z: 37, w: 39}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -81,33 +81,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -134,18 +108,84 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Piston_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 711
+        width: 321
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e3ea71032164e458b5ec64029f5525
+      internalID: 446145579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piston_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 337
+        width: 241
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7f69e51160b0c46ac14e423c0cbe2f
+      internalID: -388974543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Piston_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 129
+        width: 334
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e8554df9e5a85d4bb87eb2839414f17
+      internalID: -1041032087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Piston_0: 446145579
+      Piston_1: -388974543
+      Piston_2: -1041032087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

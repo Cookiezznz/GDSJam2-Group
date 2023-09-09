@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D leftUpper;
     public Rigidbody2D leftUpperHand;
     public static event Action<bool> OnLeftUpperAttached;
-    DistanceJoint2D LeftHandJointSocket;
+    public DistanceJoint2D LeftHandJointSocket;
 
     [Header("Left Lower")]
     public bool leftLowerActive;
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D leftLower;
     public Rigidbody2D leftLowerHand;
     public static event Action<bool> OnLeftLowerAttached;
-    DistanceJoint2D LeftFootJointSocket;
+    public DistanceJoint2D LeftFootJointSocket;
 
     [Header("Right Lower")]
     public bool rightLowerActive;
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rightLower;
     public Rigidbody2D rightLowerHand;
     public static event Action<bool> OnRightLowerAttached;
-    DistanceJoint2D RightFootJointSocket;
+    public DistanceJoint2D RightFootJointSocket;
 
     [Header("Right Upper")]
     public bool rightUpperActive;
@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rightUpper;
     public Rigidbody2D rightUpperHand;
     public static event Action<bool> OnRightUpperAttached;
-    DistanceJoint2D RightHandJointSocket;
+    public DistanceJoint2D RightHandJointSocket;
 
     [Header("Tail")]
     public bool tailActive;
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D tail;
     public Rigidbody2D tailHand;
     public static event Action<bool> OnTailAttached;
-    DistanceJoint2D TailJointSocket;
+    public DistanceJoint2D TailJointSocket;
 
 
     //Event Subscriptions
@@ -227,8 +227,8 @@ public class PlayerMovement : MonoBehaviour
             if (hit.transform.CompareTag("Prop"))
             {
                 //Grabbed a prop
-                hit.transform.parent = transform;
-                return true;
+                /*hit.transform.parent = transform;*/
+                //return true;
             }
 
             DistanceJoint2D socket = hit.transform.GetComponent<DistanceJoint2D>();
@@ -298,7 +298,7 @@ public class PlayerMovement : MonoBehaviour
             rightUpperAttached = false;
             rightUpperHand.constraints = RigidbodyConstraints2D.None;
             OnRightUpperAttached?.Invoke(false);
-            RemoveSocket(RightHandJointSocket);
+            RemoveSocket(RightFootJointSocket);
         }
 
         if (tailActive)
@@ -326,7 +326,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (socket != null)
         {
-            socket.connectedBody = null;
+            socket.connectedBody = socket.gameObject.GetComponent<Rigidbody2D>();
             socket.enabled = false;
             socket = null;
         }

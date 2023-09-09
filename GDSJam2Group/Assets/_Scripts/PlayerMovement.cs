@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("The radius (units) from which limbs can grab objects.")]
     public float grabRadius;
     public bool toggleGravityOnActivate;
+    public float spawnPipeForce;
 
 
     [Header("Limbs")] 
@@ -79,6 +80,10 @@ public class PlayerMovement : MonoBehaviour
         InputManager.OnSecondaryPressed -= DetachLimbs;
     }
 
+    void Start()
+    {
+        body2D.AddForce(Vector2.right * spawnPipeForce, ForceMode2D.Impulse);
+    }
     private void ToggleLeftUpper(bool toggle)
     {
         leftUpperActive = toggle;

@@ -30,7 +30,7 @@ public class GameStateManager : Singleton<GameStateManager>
     {
         Fabricator.OnFabricated += NextStage;
     }
-void OnEnable()
+    void OnDisable()
     {
         Fabricator.OnFabricated -= NextStage;
     }

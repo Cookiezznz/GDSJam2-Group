@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Hazard
   - Prop
+  - refined
+  - scrap
+  - StompTrigger
   layers:
   - Default
   - TransparentFX

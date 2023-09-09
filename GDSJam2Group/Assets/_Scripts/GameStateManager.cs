@@ -19,6 +19,10 @@ public class GameStateManager : Singleton<GameStateManager>
     private GameState gameState;
     
     public event Action OnGameOver;
+
+    public List<CableLineRenderer> cables;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +46,12 @@ public class GameStateManager : Singleton<GameStateManager>
 
     void GameUpdate()
     {
-        
+
+        // Renders dynamic cables
+        foreach (var cable in cables)
+        {
+            cable.CableUpdate();
+        }
     }
 
     public void PauseGame()

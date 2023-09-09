@@ -29,15 +29,9 @@ public class Fabricator : MonoBehaviour
 
     private void SpawnReward()
     {
-        // Checks that there are no other instances of refined metal before despensing then spawns a new refined metal.
-        if(reward is null)
-        {
-            reward = Instantiate(banana, output.position, output.rotation);
-            OnFabricated?.Invoke();
-        }
-        else
-        {
-            Debug.Log("Tried to dispense refined metal, but some already exists!");
-        }
+
+        reward = Instantiate(banana, output.position, output.rotation);
+        OnFabricated?.Invoke();
+
     }
 }

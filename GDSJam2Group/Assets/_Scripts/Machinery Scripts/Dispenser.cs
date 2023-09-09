@@ -35,18 +35,8 @@ public class Dispenser : MonoBehaviour
 
     public void SpawnScrap()
     {
-        //just creates a new scrap gameobject if there is not already an existing one
-        if(currentScrap is null)
-        {
-            currentScrap = Instantiate(scrap, output.position, output.rotation);
-            OnDispensed?.Invoke();
-            
-        }
-        else
-        {
-            Debug.Log("Tried spawning scrap, but one already exists!");
-        }
-        
+        currentScrap = Instantiate(scrap, output.position, output.rotation);
+        OnDispensed?.Invoke();
     }
 
 

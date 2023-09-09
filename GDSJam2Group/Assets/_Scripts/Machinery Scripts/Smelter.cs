@@ -38,23 +38,11 @@ public class Smelter : MonoBehaviour
 
     public void SpawnRefined()
     {
-        // Checks that there are no other instances of refined metal before despensing then spawns a new refined metal.
-        if(currentRefined is null)
-        {
-            currentRefined = Instantiate(refined, output.position, output.rotation);
-            InvokeSmelted();
-        }
-        else
-        {
-            Debug.Log("Tried to dispense refined metal, but some already exists!");
-        }
-        
-    }
 
-    public static void InvokeSmelted()
-    {
-        Debug.Log("Invoking OnSmelted event");
+        currentRefined = Instantiate(refined, output.position, output.rotation);
         OnSmelted?.Invoke();
+
+        
     }
 
 

@@ -111,4 +111,24 @@ public class CableLineRenderer : MonoBehaviour
         if (readyToRender) { RenderCable(); }
         CableLength = cableLengthHidden;
     }
+
+
+
+    public void Electrify()
+    {
+        foreach (var joint in joints)
+        {
+            joint.tag = "Hazard";
+        }
+    }
+
+
+
+    public void Delectrify()
+    {
+        foreach (var joint in joints)
+        {
+            joint.tag = "Untagged";
+        }
+    }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3645468679089117083}
   - component: {fileID: 5907686424620725674}
   - component: {fileID: 1166333235026155988}
+  - component: {fileID: 1348788443649799650}
   m_Layer: 7
   m_Name: Anchor
   m_TagString: Untagged
@@ -113,6 +114,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!232 &1348788443649799650
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199721683231811607}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 0.005
+  m_MaxDistanceOnly: 0
 --- !u!1 &4341957078627841374
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,6 +148,7 @@ GameObject:
   - component: {fileID: 2631414150506982051}
   - component: {fileID: 1398485104550668552}
   - component: {fileID: 4720143036774169243}
+  - component: {fileID: 3685813761920476564}
   m_Layer: 7
   m_Name: CablePoint
   m_TagString: Untagged
@@ -280,7 +302,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 2.6547003, y: -1.559}
+  m_ConnectedAnchor: {x: 0, y: -0.5}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -308,8 +330,28 @@ SpringJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
   m_Distance: 0.5
-  m_DampingRatio: 0
-  m_Frequency: 1
+  m_DampingRatio: 0.5
+  m_Frequency: 10
+--- !u!232 &3685813761920476564
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4341957078627841374}
+  m_Enabled: 0
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 0.005
+  m_MaxDistanceOnly: 0
 --- !u!1 &7254977774213628496
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +558,7 @@ MonoBehaviour:
   electrified: 0
   alternatesOnOff: 0
   delayBetweenAlternating: 2
+  delayBeforeStart: 0
   cableMaterial: {fileID: 2100000, guid: f6889b8f654ce914daf50eeeba1a1840, type: 2}
   electrifiedCableMaterial: {fileID: 2100000, guid: 62bcc8009cc86e14d9d6168af9c90200,
     type: 2}

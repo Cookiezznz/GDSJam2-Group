@@ -18,7 +18,8 @@ public class GameStateManager : Singleton<GameStateManager>
 
     private GameState gameState;
     
-    public event Action OnGameOver;
+    public static event Action OnGameOver;
+    public static event Action OnGameStart;
 
     public List<CableLineRenderer> cables;
 
@@ -26,14 +27,14 @@ public class GameStateManager : Singleton<GameStateManager>
     // Start is called before the first frame update
     void Start()
     {
-        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0) return;
-            StartGame();
+        StartGame();
     }
 
     public void StartGame()
     {
         if(IsPaused || Time.timeScale == 0) ResumeGame();
         gameState = new GameState();
+        OnGameStart?.Invoke();
 
     }
 

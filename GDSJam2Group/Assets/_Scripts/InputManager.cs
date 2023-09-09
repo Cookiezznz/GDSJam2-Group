@@ -31,6 +31,9 @@ public class InputManager : Singleton<InputManager>
     //Tail
     public bool tail;
     public static event Action<bool> onTail;
+    //Expire
+    public bool expire;
+    public static event Action<bool> onExpire;
 
 
 
@@ -148,6 +151,19 @@ public class InputManager : Singleton<InputManager>
             tail = false;
         }
         onTail?.Invoke(tail);
+
+    }
+    public void OnExpire(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            expire = true;
+        }
+        else if (context.canceled)
+        {
+            expire = false;
+        }
+        onExpire?.Invoke(expire);
 
     }
 

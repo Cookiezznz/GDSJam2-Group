@@ -23,35 +23,40 @@ public class PlayerMovement : MonoBehaviour
     public bool leftUpperAttached;
     public Rigidbody2D leftUpper;
     public Rigidbody2D leftUpperHand;
-    public static event Action<bool> OnLeftUpperAttached; 
+    public static event Action<bool> OnLeftUpperAttached;
+    DistanceJoint2D LeftHandJointSocket;
 
     [Header("Left Lower")]
     public bool leftLowerActive;
     public bool leftLowerAttached;
     public Rigidbody2D leftLower;
     public Rigidbody2D leftLowerHand;
-    public static event Action<bool> OnLeftLowerAttached; 
-    
+    public static event Action<bool> OnLeftLowerAttached;
+    DistanceJoint2D LeftFootJointSocket;
+
     [Header("Right Lower")]
     public bool rightLowerActive;
     public bool rightLowerAttached;
     public Rigidbody2D rightLower;
     public Rigidbody2D rightLowerHand;
-    public static event Action<bool> OnRightLowerAttached; 
+    public static event Action<bool> OnRightLowerAttached;
+    DistanceJoint2D RightFootJointSocket;
 
     [Header("Right Upper")]
     public bool rightUpperActive;
     public bool rightUpperAttached;
     public Rigidbody2D rightUpper;
     public Rigidbody2D rightUpperHand;
-    public static event Action<bool> OnRightUpperAttached; 
+    public static event Action<bool> OnRightUpperAttached;
+    DistanceJoint2D RightHandJointSocket;
 
     [Header("Tail")]
     public bool tailActive;
     public bool tailAttached;
     public Rigidbody2D tail;
     public Rigidbody2D tailHand;
-    public static event Action<bool> OnTailAttached; 
+    public static event Action<bool> OnTailAttached;
+    DistanceJoint2D TailJointSocket;
 
 
     //Event Subscriptions
@@ -225,8 +230,36 @@ public class PlayerMovement : MonoBehaviour
                 hit.transform.parent = transform;
                 return true;
             }
+
+            DistanceJoint2D socket = hit.transform.GetComponent<DistanceJoint2D>();
             //Else grabbable surface
-            hand.constraints = RigidbodyConstraints2D.FreezeAll;
+            if (socket != null)
+            {
+                socket.enabled = true;
+                socket.connectedBody = hand;
+
+                if (hand == leftUpperHand)
+                {
+                    LeftHandJointSocket = socket;
+                }
+                if (hand == leftLowerHand)
+                {
+                    LeftFootJointSocket = socket;
+                }
+                if (hand == rightUpperHand)
+                {
+                    RightHandJointSocket = socket;
+                }
+                if (hand == rightLowerHand)
+                {
+                    RightFootJointSocket = socket;
+                }
+                if (hand == tailHand)
+                {
+                    TailJointSocket = socket;
+                }
+            }
+            else { hand.constraints = RigidbodyConstraints2D.FreezeAll; }
             return true;
         }
 
@@ -240,6 +273,7 @@ public class PlayerMovement : MonoBehaviour
             leftUpperAttached = false;
             leftUpperHand.constraints = RigidbodyConstraints2D.None;
             OnLeftUpperAttached?.Invoke(false);
+            RemoveSocket(LeftHandJointSocket);
         }
 
         if (leftLowerActive)
@@ -247,6 +281,7 @@ public class PlayerMovement : MonoBehaviour
             leftLowerAttached = false;
             leftLowerHand.constraints = RigidbodyConstraints2D.None;
             OnLeftLowerAttached?.Invoke(false);
+            RemoveSocket(LeftFootJointSocket);
 
         }
 
@@ -255,6 +290,7 @@ public class PlayerMovement : MonoBehaviour
             rightLowerAttached = false;
             rightLowerHand.constraints = RigidbodyConstraints2D.None;
             OnRightLowerAttached?.Invoke(false);
+            RemoveSocket(RightHandJointSocket);
         }
 
         if (rightUpperActive)
@@ -262,6 +298,7 @@ public class PlayerMovement : MonoBehaviour
             rightUpperAttached = false;
             rightUpperHand.constraints = RigidbodyConstraints2D.None;
             OnRightUpperAttached?.Invoke(false);
+            RemoveSocket(RightHandJointSocket);
         }
 
         if (tailActive)
@@ -269,6 +306,7 @@ public class PlayerMovement : MonoBehaviour
             tailAttached = false;
             tailHand.constraints = RigidbodyConstraints2D.None;
             OnTailAttached?.Invoke(false);
+            RemoveSocket(TailJointSocket);
         }
     }
 
@@ -281,5 +319,16 @@ public class PlayerMovement : MonoBehaviour
         Gizmos.DrawWireSphere(rightUpper.transform.GetChild(0).position, grabRadius);
         Gizmos.DrawWireSphere(rightLower.transform.GetChild(0).position, grabRadius);
         Gizmos.DrawWireSphere(tail.transform.GetChild(0).position, grabRadius);
+    }
+
+
+    void RemoveSocket(DistanceJoint2D socket)
+    {
+        if (socket != null)
+        {
+            socket.connectedBody = null;
+            socket.enabled = false;
+            socket = null;
+        }
     }
 }

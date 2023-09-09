@@ -17,6 +17,14 @@ public class PlayerController : MonoBehaviour
     public float expiryDelay;
     public static event Action OnMonkeyExpired;
 
+    void OnEnable()
+    {
+        ExpireButton.OnForceExpire += ForceExpire;
+    }
+    void OnDisable()
+    {
+        ExpireButton.OnForceExpire -= ForceExpire;
+    }
     // Start is called before the first frame update
     public void Collide(string tag)
     {
@@ -24,11 +32,21 @@ public class PlayerController : MonoBehaviour
 
         if (tag == "Hazard")
         {
-            StartCoroutine(MonkeyExpired());
+            MonkeyExpire();
         }
     }
 
-    IEnumerator MonkeyExpired()
+    void ForceExpire()
+    {
+        StartCoroutine(EMonkeyExpired(true));
+    }
+    
+    void MonkeyExpire()
+    {
+        StartCoroutine(EMonkeyExpired(false));
+    }
+
+    IEnumerator EMonkeyExpired(bool skipTimer)
     {
         if (monkeyExpired) yield return null;
         Debug.LogWarning("Monkey Expired");
@@ -44,7 +62,8 @@ public class PlayerController : MonoBehaviour
         bananasPS.transform.parent = null;
         bananasPS.Play();
 
-        yield return new WaitForSeconds(expiryDelay);
+        if(!skipTimer)
+            yield return new WaitForSeconds(expiryDelay);
 
         Destroy(gameObject);
 

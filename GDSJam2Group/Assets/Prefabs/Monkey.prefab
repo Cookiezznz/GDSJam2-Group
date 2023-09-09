@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7211541409240723626}
   - component: {fileID: 5458027165604052265}
   - component: {fileID: 4175107153121536704}
+  - component: {fileID: 757859865217806976}
   m_Layer: 6
   m_Name: Hat
   m_TagString: Player
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 2
   m_Sprite: {fileID: 1898631542, guid: 5b3e8925e5ff84b4294499564a8b893f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.86833215, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -169,6 +170,27 @@ PolygonCollider2D:
       - {x: 0.17382868, y: 0.10613875}
       - {x: 0.10303694, y: 0.13382854}
   m_UseDelaunayMesh: 0
+--- !u!114 &757859865217806976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270595814516599430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76c15eaff8f33f43926cbbc400c0325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hat: {fileID: 7211541409240723626}
+  hatColours:
+  - {r: 0.16264686, g: 0.45146576, b: 0.8018868, a: 1}
+  - {r: 0.92941177, g: 0.8676396, b: 0.172549, a: 1}
+  - {r: 0.7830189, g: 0.12927197, b: 0.14248374, a: 1}
+  - {r: 0.8962264, g: 0.44258475, b: 0.12259703, a: 1}
+  - {r: 0.1994482, g: 0.509434, b: 0.29483125, a: 1}
+  - {r: 0.8773585, g: 0.24417053, b: 0.5377395, a: 1}
+  - {r: 0.2028302, g: 0.8113208, b: 0.34665525, a: 1}
 --- !u!1 &298909751240458720
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,22 +432,27 @@ MonoBehaviour:
   leftUpperAttached: 0
   leftUpper: {fileID: 2880967409299357979}
   leftUpperHand: {fileID: 9200408383133676551}
+  LeftHandJointSocket: {fileID: 0}
   leftLowerActive: 0
   leftLowerAttached: 0
   leftLower: {fileID: 4664336667181242035}
   leftLowerHand: {fileID: 8296056543826510906}
+  LeftFootJointSocket: {fileID: 0}
   rightLowerActive: 0
   rightLowerAttached: 0
   rightLower: {fileID: 4544987196351205539}
   rightLowerHand: {fileID: 7991445103083407382}
+  RightFootJointSocket: {fileID: 0}
   rightUpperActive: 0
   rightUpperAttached: 0
   rightUpper: {fileID: 5965386943073531947}
   rightUpperHand: {fileID: 30474390594797942}
+  RightHandJointSocket: {fileID: 0}
   tailActive: 0
   tailAttached: 0
   tail: {fileID: 6318863174905929287}
   tailHand: {fileID: 3717655398020464467}
+  TailJointSocket: {fileID: 0}
 --- !u!114 &7424558484166219927
 MonoBehaviour:
   m_ObjectHideFlags: 0

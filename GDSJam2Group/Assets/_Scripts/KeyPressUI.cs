@@ -213,11 +213,11 @@ public class KeyPressUI : MonoBehaviour
 
         if (canvas)
         {
-            leftUpperGO.SetActive(false);
-            leftLowerGO.SetActive(false);
-            rightUpperGO.SetActive(false);
-            rightLowerGO.SetActive(false);
-            tailGO.SetActive(false);
+            leftUpperGO.SetActive(true);
+            leftLowerGO.SetActive(true);
+            rightUpperGO.SetActive(true);
+            rightLowerGO.SetActive(true);
+            tailGO.SetActive(true);
         }
     }
 }

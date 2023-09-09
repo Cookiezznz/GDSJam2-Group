@@ -1640,6 +1640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906370672604163415}
   - component: {fileID: 160003711315744666}
+  - component: {fileID: 5824348552160717451}
   m_Layer: 6
   m_Name: Head
   m_TagString: Player
@@ -1714,6 +1715,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5824348552160717451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417040830496212565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7312c5eee3405cf4ca6cb4e012bac251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  face: {fileID: 160003711315744666}
+  faces:
+  - {fileID: 21300000, guid: 6416d15a45dcc244aa05cd9143396e76, type: 3}
+  - {fileID: 21300000, guid: d38b6b2940fc4e74fb781ea2044e683b, type: 3}
+  - {fileID: 21300000, guid: 1d733d7ac38ace744a88783cd230ae8a, type: 3}
+  - {fileID: 21300000, guid: 2ee5e02abdbf2ba4eaab7c929b99e891, type: 3}
+  - {fileID: 21300000, guid: 96e30a3e0fc7a214fbdccd5ca8d3e30a, type: 3}
+  - {fileID: 21300000, guid: 3b530806089e33440b99ddf04ee355b7, type: 3}
+  - {fileID: 21300000, guid: 7ce5cde95605d2d4ebfbf59c6217ca3e, type: 3}
+  - {fileID: 21300000, guid: 7e9d75b9fc82fc644bc2b4e3da76e02e, type: 3}
+  - {fileID: 21300000, guid: 96390902422c4f84db2427fe6b17fa7e, type: 3}
+  - {fileID: 2019652213, guid: 5b3e8925e5ff84b4294499564a8b893f, type: 3}
 --- !u!1 &7517570164641729458
 GameObject:
   m_ObjectHideFlags: 0

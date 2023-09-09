@@ -176,6 +176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3562337965746665778, guid: 98e594733d7157c40b4e4aeeba6b34a0,
         type: 3}
+      propertyPath: respawnAsRefined
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3562337965746665778, guid: 98e594733d7157c40b4e4aeeba6b34a0,
+        type: 3}
       propertyPath: forceRangeXOnSpawn.x
       value: -1
       objectReference: {fileID: 0}

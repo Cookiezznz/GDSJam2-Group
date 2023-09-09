@@ -21,13 +21,30 @@ public class GameStateManager : Singleton<GameStateManager>
     public static event Action OnGameOver;
     public static event Action OnGameStart;
 
+    public int currentStage;
+    public static event Action<int> StageStarted;
+
     public List<CableLineRenderer> cables;
 
+    void OnEnable()
+    {
+        Fabricator.OnFabricated += NextStage;
+    }
+void OnEnable()
+    {
+        Fabricator.OnFabricated -= NextStage;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         StartGame();
+    }
+
+    public void NextStage(int numberOfFabrications)
+    {
+        currentStage++;
+        StageStarted?.Invoke(currentStage);
     }
 
     public void StartGame()

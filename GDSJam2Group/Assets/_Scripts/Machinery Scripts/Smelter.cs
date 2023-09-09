@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Smelter : MonoBehaviour
 {
+    public Transform propsHolder;
+    
     [SerializeField]
     GameObject refined;
 
@@ -17,12 +19,12 @@ public class Smelter : MonoBehaviour
 
     private void OnEnable()
     {
-        PickupRespawner.RefinedRespawn += SpawnRefined;
+        PropRespawner.RefinedRespawn += SpawnRefined;
     }
 
     private void OnDisable()
     {
-        PickupRespawner.RefinedRespawn -= SpawnRefined;
+        PropRespawner.RefinedRespawn -= SpawnRefined;
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,7 +41,7 @@ public class Smelter : MonoBehaviour
     public void SpawnRefined()
     {
 
-        currentRefined = Instantiate(refined, output.position, output.rotation);
+        currentRefined = Instantiate(refined, output.position, output.rotation, propsHolder);
         OnSmelted?.Invoke();
 
         

@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Dispenser : MonoBehaviour
 {
+    public Transform propsHolder;
     [SerializeField]
     Transform output;
 
@@ -19,13 +20,13 @@ public class Dispenser : MonoBehaviour
     private void OnEnable()
     {
         Fabricator.OnFabricated += SpawnScrap;
-        PickupRespawner.ScrapRespawn += SpawnScrap;
+        PropRespawner.ScrapRespawn += SpawnScrap;
     }
 
     private void OnDisable()
     {
         Fabricator.OnFabricated -= SpawnScrap;
-        PickupRespawner.ScrapRespawn -= SpawnScrap;
+        PropRespawner.ScrapRespawn -= SpawnScrap;
     }
 
     private void Start()
@@ -33,11 +34,16 @@ public class Dispenser : MonoBehaviour
         SpawnScrap();
     }
 
+    public void SpawnScrap(int numberOfFabrications)
+    {
+        SpawnScrap();
+    }
     public void SpawnScrap()
     {
-        currentScrap = Instantiate(scrap, output.position, output.rotation);
+        currentScrap = Instantiate(scrap, output.position, output.rotation, propsHolder);
         OnDispensed?.Invoke();
     }
+    
 
 
 }

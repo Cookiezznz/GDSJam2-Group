@@ -1,28 +1,41 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PropRespawner : MonoBehaviour
 {
-    [SerializeField]
-    Transform respawnLocation;
-
-    [SerializeField]
-    Vector2 forceAppliedOnRespawn;
-
-    Rigidbody2D rb;
-
+    public static event Action ScrapRespawn;
+    public static event Action RefinedRespawn;
     
-    // Update is called once per frame
-    void OnEnable(){
-        rb = gameObject.GetComponent<Rigidbody2D>();
+    private void OnEnable()
+    {
+        Prop.PickupDestroyed += RespawnPickup;
     }
 
-    public void LaunchProp(){
-        rb.velocity = Vector2.zero;
-        transform.position = respawnLocation.position;
-        transform.rotation = respawnLocation.rotation;
-        rb.AddForce(forceAppliedOnRespawn, ForceMode2D.Impulse);
+    private void OnDisable()
+    {
+        Prop.PickupDestroyed -= RespawnPickup;
+    }
+    
+    public void RespawnPickup(bool respawnAsRefined)
+    {
+        StartCoroutine(SpawnDelay(respawnAsRefined));
     }
 
+    IEnumerator SpawnDelay(bool respawnAsRefined)
+    {
+        yield return new WaitForEndOfFrame();
+        if (respawnAsRefined)
+        {
+            RefinedRespawn?.Invoke();
+            
+        }
+        else
+        {
+            ScrapRespawn?.Invoke();
+        }
+        
+    }
 }
+

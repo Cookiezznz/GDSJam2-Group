@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Fabricator : MonoBehaviour
 {
+    public Transform propsHolder;
 
     [SerializeField]
     GameObject banana;
@@ -14,7 +15,9 @@ public class Fabricator : MonoBehaviour
 
     GameObject reward;
 
-    public static event Action OnFabricated;
+    public static event Action<int> OnFabricated;
+
+    public int fabrications;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,6 +26,7 @@ public class Fabricator : MonoBehaviour
         if (prop.prop == Prop.Props.Refined)
         {
             Destroy(collision.gameObject);
+            fabrications++;
             SpawnReward();
         }
     }
@@ -30,8 +34,8 @@ public class Fabricator : MonoBehaviour
     private void SpawnReward()
     {
 
-        reward = Instantiate(banana, output.position, output.rotation);
-        OnFabricated?.Invoke();
+        reward = Instantiate(banana, output.position, output.rotation, propsHolder);
+        OnFabricated?.Invoke(fabrications);
 
     }
 }

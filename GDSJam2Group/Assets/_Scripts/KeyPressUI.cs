@@ -7,35 +7,44 @@ using static UnityEditor.PlayerSettings;
 
 public class KeyPressUI : MonoBehaviour
 {
+    private Camera camera;
+    public Sprite activeSprite;
+    public Sprite inactiveSprite;
+
+    [Header("Targets")]
     //UI Images
+    public GameObject leftUpperGO;
+    public GameObject leftLowerGO;
+    public GameObject rightUpperGO;
+    public GameObject rightLowerGO;
+    public GameObject tailGO;
+
     public Image leftUpperImage;
     public Image leftLowerImage;
     public Image rightUpperImage;
     public Image rightLowerImage;
     public Image tailImage;
 
+    private RectTransform leftUpperRTransform;
+    private RectTransform leftLowerRTransform;
+    private RectTransform rightUpperRTransform;
+    private RectTransform rightLowerRTransform;
+    private RectTransform tailRTransform;
+
+    public GameObject leftUpperAttachGO;
+    public GameObject leftLowerAttachGO;
+    public GameObject rightUpperAttachGO;
+    public GameObject rightLowerAttachGO;
+    public GameObject tailAttachGO;
+
+    [Header("Follow Targets")]
+    public RectTransform canvas;
     public Transform leftUpperTransform;
     public Transform leftLowerTransform;
     public Transform rightUpperTransform;
     public Transform rightLowerTransform;
     public Transform tailTransform;
 
-    private RectTransform leftUpperRTransform;
-    private RectTransform leftLowerRTransform ;
-    private RectTransform rightUpperRTransform;
-    private RectTransform rightLowerRTransform;
-    private RectTransform tailRTransform;
-
-    private Camera camera;
-    public RectTransform canvas;
-
-    public Color activeColour;
-    public Sprite activeSprite;
-
-    public Color attachedColour;
-
-    public Color inactiveColour;
-    public Sprite inactiveSprite;
 
     //Event Subscriptions
     void OnEnable()
@@ -45,23 +54,29 @@ public class KeyPressUI : MonoBehaviour
         InputManager.onRightUpper += ShowKeyRightUpper;
         InputManager.onRightLower += ShowKeyRightLower;
         InputManager.onTail += ShowKeyTail;
-        
+
         PlayerMovement.OnLeftUpperAttached += LeftUpperAttached;
         PlayerMovement.OnLeftLowerAttached += LeftLowerAttached;
         PlayerMovement.OnRightUpperAttached += RightUpperAttached;
         PlayerMovement.OnRightLowerAttached += RightLowerAttached;
         PlayerMovement.OnTailAttached += TailAttached;
 
-        leftUpperRTransform = leftUpperImage.GetComponent<RectTransform>();
-        leftLowerRTransform = leftLowerImage.GetComponent<RectTransform>();
-        rightUpperRTransform = rightUpperImage.GetComponent<RectTransform>();
-        rightLowerRTransform = rightLowerImage.GetComponent<RectTransform>();
-        tailRTransform = tailImage.GetComponent<RectTransform>();
+        leftUpperRTransform = leftUpperGO.GetComponent<RectTransform>();
+        leftLowerRTransform = leftLowerGO.GetComponent<RectTransform>();
+        rightUpperRTransform = rightUpperGO.GetComponent<RectTransform>();
+        rightLowerRTransform = rightLowerGO.GetComponent<RectTransform>();
+        tailRTransform = tailGO.GetComponent<RectTransform>();
 
         PlayerController.OnMonkeyExpired += ClearAllKeys;
         MonkeyManager.OnMonkeySpawned += ReattachKeys;
 
         camera = Camera.main;
+
+        leftUpperAttachGO.SetActive(false);
+        leftLowerAttachGO.SetActive(false);
+        rightUpperAttachGO.SetActive(false);
+        rightLowerAttachGO.SetActive(false);
+        tailAttachGO.SetActive(false);
     }
 
     void OnDisable()
@@ -121,87 +136,70 @@ public class KeyPressUI : MonoBehaviour
     //Show Keys Activated
     public void ShowKeyLeftUpper(bool toggle)
     {
-        //if not attached, turn inactive.
-        if(leftUpperImage.color != attachedColour)
-        leftUpperImage.color = toggle ? activeColour : inactiveColour;
         leftUpperImage.sprite = toggle ? activeSprite : inactiveSprite;
     }
 
     public void ShowKeyLeftLower(bool toggle)
     {
-        //if not attached, turn inactive.
-        if(leftLowerImage.color != attachedColour)
-        leftLowerImage.color = toggle ? activeColour : inactiveColour;
         leftLowerImage.sprite = toggle ? activeSprite : inactiveSprite;
     }
 
     public void ShowKeyRightLower(bool toggle)
     {
-        //if not attached, turn inactive.
-        if(rightLowerImage.color != attachedColour)
-        rightLowerImage.color = toggle ? activeColour : inactiveColour;
+        
         rightLowerImage.sprite = toggle ? activeSprite : inactiveSprite;
     }
 
     public void ShowKeyRightUpper(bool toggle)
     {
         //if not attached, turn inactive.
-        if(rightUpperImage.color != attachedColour)
-            rightUpperImage.color = toggle ? activeColour : inactiveColour;
-            rightUpperImage.sprite = toggle ? activeSprite : inactiveSprite;
+        rightUpperImage.sprite = toggle ? activeSprite : inactiveSprite;
     }
 
     public void ShowKeyTail(bool toggle)
     {
-        //if not attached, turn inactive.
-        if(tailImage.color != attachedColour)
-            tailImage.color = toggle ? activeColour : inactiveColour;
+        //if not attached, turn inactive
         tailImage.sprite = toggle ? activeSprite : inactiveSprite;
     }
 
     //Show Attachments
     public void LeftUpperAttached(bool toggle)
     {
-        //If detaching, revert to active or not
-        leftUpperImage.color = toggle ? attachedColour : InputManager.Instance.leftUpper ? activeColour : inactiveColour;
+        leftUpperAttachGO.SetActive(toggle);
     }
     public void LeftLowerAttached(bool toggle)
     {
-        //If detaching, revert to active or not
-        leftLowerImage.color = toggle ? attachedColour : InputManager.Instance.leftLower ? activeColour : inactiveColour;
+        leftLowerAttachGO.SetActive(toggle);
     }
     public void RightUpperAttached(bool toggle)
     {
-        //If detaching, revert to active or not
-        rightUpperImage.color = toggle ? attachedColour : InputManager.Instance.rightUpper ? activeColour : inactiveColour;
+        rightUpperAttachGO.SetActive(toggle);
     }
     public void RightLowerAttached(bool toggle)
     {
-        //If detaching, revert to active or not
-        rightLowerImage.color = toggle ? attachedColour : InputManager.Instance.rightLower ? activeColour : inactiveColour;
+        rightLowerAttachGO.SetActive(toggle);
     }
     public void TailAttached(bool toggle)
     {
-        //If detaching, revert to active or not
-        tailImage.color = toggle ? attachedColour : InputManager.Instance.tail ? activeColour : inactiveColour;
+        tailAttachGO.SetActive(toggle);
     }
 
     public void ClearAllKeys()
     {
         if (canvas)
         {
-            leftUpperImage.gameObject.SetActive(false);
-            leftLowerImage.gameObject.SetActive(false);
-            rightUpperImage.gameObject.SetActive(false);
-            rightLowerImage.gameObject.SetActive(false);
-            tailImage.gameObject.SetActive(false);
+            leftUpperGO.SetActive(false);
+            leftLowerGO.SetActive(false);
+            rightUpperGO.SetActive(false);
+            rightLowerGO.SetActive(false);
+            tailGO.SetActive(false);
         }
 
-        leftUpperImage.color = inactiveColour;
-        leftLowerImage.color = inactiveColour;
-        rightUpperImage.color = inactiveColour;
-        rightLowerImage.color = inactiveColour;
-        tailImage.color = inactiveColour;
+        leftUpperImage.sprite = inactiveSprite;
+        leftLowerImage.sprite = inactiveSprite;
+        rightUpperImage.sprite = inactiveSprite;
+        rightLowerImage.sprite = inactiveSprite;
+        tailImage.sprite = inactiveSprite;
     }
 
     public void ReattachKeys(GameObject newMonkey)
@@ -215,11 +213,11 @@ public class KeyPressUI : MonoBehaviour
 
         if (canvas)
         {
-            leftUpperImage.gameObject.SetActive(true);
-            leftLowerImage.gameObject.SetActive(true);
-            rightUpperImage.gameObject.SetActive(true);
-            rightLowerImage.gameObject.SetActive(true);
-            tailImage.gameObject.SetActive(true);
+            leftUpperGO.SetActive(false);
+            leftLowerGO.SetActive(false);
+            rightUpperGO.SetActive(false);
+            rightLowerGO.SetActive(false);
+            tailGO.SetActive(false);
         }
     }
 }

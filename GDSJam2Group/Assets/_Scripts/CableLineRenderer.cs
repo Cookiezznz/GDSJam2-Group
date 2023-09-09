@@ -105,9 +105,8 @@ public class CableLineRenderer : MonoBehaviour
 
 
 
-    private void Update()
+    public void CableUpdate()
     {
-        // for now this is on Update but we'll wanna move it elsewhere soon!
         if (readyToRender) { RenderCable(); }
         CableLength = cableLengthHidden;
     }

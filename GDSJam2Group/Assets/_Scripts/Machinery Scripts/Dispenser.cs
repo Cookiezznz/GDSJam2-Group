@@ -18,12 +18,14 @@ public class Dispenser : MonoBehaviour
 
     private void OnEnable()
     {
-        Fabricator.OnFabricated += Fabricated;
+        Fabricator.OnFabricated += RespawnScrap;
+        PickupRespawner.ScrapRespawn += RespawnScrap;
     }
 
     private void OnDisable()
     {
-        Fabricator.OnFabricated -= Fabricated;
+        Fabricator.OnFabricated -= RespawnScrap;
+        PickupRespawner.ScrapRespawn -= RespawnScrap;
     }
 
     private void Start()
@@ -31,7 +33,7 @@ public class Dispenser : MonoBehaviour
         SpawnScrap();
     }
 
-    private void Fabricated()
+    private void RespawnScrap()
     {
         SpawnScrap();
     }
@@ -59,4 +61,6 @@ public class Dispenser : MonoBehaviour
         Debug.Log("Dispenser Event called.");
         OnDispensed?.Invoke();
     }
+
+    
 }

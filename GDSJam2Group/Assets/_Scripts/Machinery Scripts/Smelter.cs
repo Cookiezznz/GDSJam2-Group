@@ -15,17 +15,16 @@ public class Smelter : MonoBehaviour
 
     public static event Action OnSmelted;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        PickupRespawner.RefinedRespawn += RespawnRefined;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        PickupRespawner.RefinedRespawn -= RespawnRefined;
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -52,6 +51,11 @@ public class Smelter : MonoBehaviour
             Debug.Log("Tried to dispense refined metal, but some already exists!");
         }
         
+    }
+
+    void RespawnRefined()
+    {
+        SpawnRefined();
     }
 
     public static void InvokeSmelted()

@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class CameraSpeedZoom : MonoBehaviour
 {
     public CinemachineVirtualCamera vCam;
+    public CinemachineConfiner2D vConfiner;
     public Vector2 orthoRange;
     public Vector2 speedRange;
     public AnimationCurve speedToZoomCurve;
@@ -61,6 +62,8 @@ public class CameraSpeedZoom : MonoBehaviour
         }
 
         // Assign the calculated orthographic size to the vCam
-        vCam.m_Lens.OrthographicSize = orthoSize;   
+        vCam.m_Lens.OrthographicSize = orthoSize;
+
+        vConfiner.InvalidateCache();
     }
 }

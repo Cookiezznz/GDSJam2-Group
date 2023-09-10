@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CableBehaviour : MonoBehaviour
@@ -34,10 +35,7 @@ public class CableBehaviour : MonoBehaviour
 
     void CheckForActivate(int currentStage)
     {
-        foreach (var activeStage in activeStages)
-        {
-            ToggleActive(currentStage == activeStage);
-        }
+        ToggleActive(activeStages.Contains(currentStage));
     }
 
 

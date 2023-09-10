@@ -9,6 +9,7 @@ TagManager:
   - refined
   - scrap
   - StompTrigger
+  - HazardElectric
   layers:
   - Default
   - TransparentFX

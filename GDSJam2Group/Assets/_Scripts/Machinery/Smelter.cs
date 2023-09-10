@@ -31,6 +31,7 @@ public class Smelter : MonoBehaviour
     {
         //Checks if the inputed object is scrap - if so destroys the scrap and attempts to dispense refined metal
         Prop prop = collision.GetComponent<Prop>();
+        if (!prop) return;
         if(prop.prop == Prop.Props.Scrap)
         {
             Destroy(collision.gameObject);

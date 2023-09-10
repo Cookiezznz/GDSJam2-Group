@@ -22,6 +22,49 @@ public class PistonBehaviour : MonoBehaviour
     float currentDist = 0;
     float travelDist;
 
+    public int[] activeStages;
+    bool active;
+
+
+
+    private void OnEnable()
+    {
+        GameStateManager.StageStarted += CheckForActivate;
+    }
+
+    private void OnDisable()
+    {
+        GameStateManager.StageStarted -= CheckForActivate;
+    }
+
+
+
+
+    void CheckForActivate(int currentStage)
+    {
+        foreach (var activeStage in activeStages)
+        {
+            ToggleActive(currentStage == activeStage);
+        }
+    }
+
+
+    void ToggleActive(bool checkActiveStage)
+    {
+        if (checkActiveStage == active) return;
+        active = checkActiveStage;
+
+        if (active)
+        {
+            if (moving) { Moving = true; }
+        }
+        else
+        {
+            if (moving) { Moving = false; }
+        }
+    }
+
+
 
     private void Start()
     {
@@ -29,7 +72,6 @@ public class PistonBehaviour : MonoBehaviour
         deathTrigger = transform.GetChild(1).gameObject;
         deathTrigger.SetActive(false);
         travelDist = Vector3.Distance(destination.position, origin.position);
-        if (moving) { Moving = true; }
     }
 
 

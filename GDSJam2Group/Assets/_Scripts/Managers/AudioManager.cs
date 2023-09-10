@@ -1,15 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 [Serializable]
 public struct Sound
 {
     public string name;
-    public AudioClip clip;
+    public AudioClip[] clips;
     public float volumePercent;
 }
 
@@ -46,7 +48,7 @@ public class AudioManager : Singleton<AudioManager>
 
     private void Start()
     {
-        if(playOnStart)
+        if(playOnStart && startingMusic.Length > 0)
             PlayMusic(startingMusic);
 
         //Reset volumes to default.
@@ -60,7 +62,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         Sound sound = sounds.Find(s => s.name == soundToPlay);
 
-        if (sound.clip == null)
+        if (sound.clips == null)
         {
             Debug.Log("Sound not found: " + soundToPlay);
             return;
@@ -80,7 +82,9 @@ public class AudioManager : Singleton<AudioManager>
         AudioSource source = gameObject.AddComponent<AudioSource>();
         source.outputAudioMixerGroup = sfxMix;
 
-        source.clip = soundToPlay.clip;
+        if (soundToPlay.clips.Length == 0) return;
+
+        source.clip = soundToPlay.clips[Random.Range(0, soundToPlay.clips.Length)];
         source.volume = soundToPlay.volumePercent * sfxVolume;
         source.Play();
 
@@ -91,7 +95,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         Sound sound = music.Find(s => s.name == musicToPlay);
 
-        if (sound.clip == null)
+        if (sound.clips == null)
         {
             Debug.Log("Music not found: " + musicToPlay);
             return;
@@ -115,7 +119,7 @@ public class AudioManager : Singleton<AudioManager>
         }
         
         currentMusic = musicToPlay;
-        musicSource.clip = currentMusic.clip;
+        musicSource.clip = currentMusic.clips[Random.Range(0, currentMusic.clips.Length)];
         musicSource.volume = currentMusic.volumePercent * musicVolume;
         
         musicSource.loop = true;
@@ -126,7 +130,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         Sound sound = dialogue.Find(s => s.name == dialogueToPlay);
 
-        if (sound.clip == null)
+        if (sound.clips == null)
         {
             Debug.Log("Dialogue not found: " + dialogueToPlay);
             return;
@@ -146,7 +150,7 @@ public class AudioManager : Singleton<AudioManager>
             dialogueSource.outputAudioMixerGroup = dialogueMix;
         }
 
-        dialogueSource.clip = dialogueToPlay.clip;
+        dialogueSource.clip = dialogueToPlay.clips[Random.Range(0, dialogueToPlay.clips.Length)];
         dialogueSource.volume = dialogueToPlay.volumePercent * dialogueVolume;
         dialogueSource.Play();
 

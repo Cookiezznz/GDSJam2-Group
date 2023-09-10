@@ -32,23 +32,31 @@ public class PlayerController : MonoBehaviour
 
         if (tag == "Hazard")
         {
-            MonkeyExpire();
+            MonkeyExpire(false);
+        }
+        if (tag == "HazardElectric")
+        {
+            MonkeyExpire(true);
         }
     }
 
     void ForceExpire()
     {
-        StartCoroutine(EMonkeyExpired(true));
+        StartCoroutine(EMonkeyExpired(true, false));
     }
     
-    void MonkeyExpire()
+    void MonkeyExpire(bool isElectric)
     {
-        StartCoroutine(EMonkeyExpired(false));
+        StartCoroutine(EMonkeyExpired(false, isElectric));
     }
 
-    IEnumerator EMonkeyExpired(bool skipTimer)
+    IEnumerator EMonkeyExpired(bool skipTimer, bool isElectric)
     {
         if (monkeyExpired) yield return null;
+        if(isElectric)
+            AudioManager.Instance.PlaySound("expireelectric");
+        else
+            AudioManager.Instance.PlaySound("expire");
         Debug.LogWarning("Monkey Expired");
         monkeyExpired = true;
         hat.transform.parent = null;

@@ -34,7 +34,7 @@ public class Fabricator : MonoBehaviour
 
     private void SpawnReward()
     {
-
+        AudioManager.Instance.PlaySound("fabricate");
         reward = Instantiate(banana, output.position, output.rotation, propsHolder);
         
 

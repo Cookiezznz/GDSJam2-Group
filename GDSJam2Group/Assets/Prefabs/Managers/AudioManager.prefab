@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6986852466076077701}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2849904549416316264
 MonoBehaviour:
@@ -52,23 +52,96 @@ MonoBehaviour:
   musicMix: {fileID: -1413795500009600871, guid: 40e2884f3344b2e46b7d709567c2fe48,
     type: 2}
   playOnStart: 0
-  startingMusic: TitleMusic
+  startingMusic: 
   music:
-  - name: TitleMusic
-    clip: {fileID: 8300000, guid: 8baa98057153db143b688b0ee0d02b3e, type: 3}
+  - name: title
+    clips:
+    - {fileID: 8300000, guid: fc6c9e3e947e0ee458f79ae2d15e4e54, type: 3}
+    volumePercent: 1
+  - name: simianvocal
+    clips:
+    - {fileID: 8300000, guid: fc6c9e3e947e0ee458f79ae2d15e4e54, type: 3}
     volumePercent: 1
   sfxMute: 0
   sfxVolume: 1
   sfxMix: {fileID: 1164407368917790334, guid: 40e2884f3344b2e46b7d709567c2fe48, type: 2}
   sounds:
-  - name: UiBlip
-    clip: {fileID: 8300000, guid: d89bdd79a236dbd45b3951c270fe341c, type: 3}
+  - name: uiblip
+    clips:
+    - {fileID: 8300000, guid: d89bdd79a236dbd45b3951c270fe341c, type: 3}
+    volumePercent: 1
+  - name: missile
+    clips:
+    - {fileID: 8300000, guid: 1fca55b9fff61364085a4ee954d9be71, type: 3}
+    volumePercent: 1
+  - name: pickupmetal
+    clips:
+    - {fileID: 8300000, guid: 54416aee50248754590611da3b7b890c, type: 3}
+    volumePercent: 1
+  - name: pickupscrap
+    clips:
+    - {fileID: 8300000, guid: 3676d6fbe9f1e2747ad89150b94d3612, type: 3}
+    volumePercent: 1
+  - name: stick
+    clips:
+    - {fileID: 8300000, guid: e1d27993510040e47a237a0032f005f7, type: 3}
+    volumePercent: 1
+  - name: swing
+    clips:
+    - {fileID: 8300000, guid: 89ee8af647186a645bbc024be0f27902, type: 3}
+    volumePercent: 1
+  - name: unstick
+    clips:
+    - {fileID: 8300000, guid: 07a432e8ec92f3248a4a8139f71d597f, type: 3}
+    volumePercent: 1
+  - name: expire
+    clips:
+    - {fileID: 8300000, guid: 4ce853de7d572f64b962ce138ddcdc47, type: 3}
+    - {fileID: 8300000, guid: 897d74670b1a75f469228c4690dd1d37, type: 3}
+    - {fileID: 8300000, guid: 88d06f44623171849830bfbe46da5569, type: 3}
+    volumePercent: 1
+  - name: expireelectric
+    clips:
+    - {fileID: 8300000, guid: f82d0ed2d06ab3e4dbf15d5932750784, type: 3}
+    volumePercent: 1
+  - name: eat
+    clips:
+    - {fileID: 8300000, guid: 750fe234905f55249ba8800ebff69999, type: 3}
+    volumePercent: 1
+  - name: smelt
+    clips:
+    - {fileID: 8300000, guid: 9948c12604fb6d74ea8d70327f6f5051, type: 3}
+    volumePercent: 1
+  - name: scrap
+    clips:
+    - {fileID: 8300000, guid: 18ea1baeb1a463a4298c34ae5672e32b, type: 3}
+    volumePercent: 1
+  - name: fabricate
+    clips:
+    - {fileID: 8300000, guid: be435658fecadab47a33c56a012b3c7d, type: 3}
     volumePercent: 1
   dialogueMute: 0
   dialogueVolume: 1
   dialogueMix: {fileID: -321397112277999116, guid: 40e2884f3344b2e46b7d709567c2fe48,
     type: 2}
   dialogue:
-  - name: DialogueTest
-    clip: {fileID: 0}
+  - name: announcement
+    clips:
+    - {fileID: 8300000, guid: 457929fc42c10fa478be19fbb9e6ed4c, type: 3}
+    - {fileID: 8300000, guid: 99100d46895922b4cb0c7a256d0b350a, type: 3}
+    - {fileID: 8300000, guid: 051be0aac99fbdc4dbab1a4fef44eced, type: 3}
+    - {fileID: 8300000, guid: 19c936740e5c7344a9b7d422eaf5771d, type: 3}
+    - {fileID: 8300000, guid: 9082c08443ed4df488505eaf1062c5cd, type: 3}
+    - {fileID: 8300000, guid: e4254186215c10743a3fbcfce4c4aac3, type: 3}
+    - {fileID: 8300000, guid: 21e087ac5bf6ad64089f8da25d314bf3, type: 3}
+    - {fileID: 8300000, guid: b4c08091ab460b346a7fb163d7b7995b, type: 3}
+    - {fileID: 8300000, guid: 8c123993d49a8744aba7cd764fa48a89, type: 3}
+    - {fileID: 8300000, guid: 92100ebe004758f4ca1a164303194055, type: 3}
+    - {fileID: 8300000, guid: 5546cb0cade6a5c4ab44c38684e738c6, type: 3}
+    volumePercent: 1
+  - name: announcementExtra
+    clips:
+    - {fileID: 8300000, guid: 8c123993d49a8744aba7cd764fa48a89, type: 3}
+    - {fileID: 8300000, guid: 92100ebe004758f4ca1a164303194055, type: 3}
+    - {fileID: 8300000, guid: 5546cb0cade6a5c4ab44c38684e738c6, type: 3}
     volumePercent: 1

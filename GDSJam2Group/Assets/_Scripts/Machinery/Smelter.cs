@@ -41,7 +41,7 @@ public class Smelter : MonoBehaviour
 
     public void SpawnRefined()
     {
-
+        AudioManager.Instance.PlaySound("smelt");
         currentRefined = Instantiate(refined, output.position, output.rotation, propsHolder);
         OnSmelted?.Invoke();
 

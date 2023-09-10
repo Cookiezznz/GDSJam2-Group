@@ -101,8 +101,6 @@ public class GameStateManager : Singleton<GameStateManager>
             UpdateGameState(null, 0, 0, true); 
         }
 
-        
-        PauseGame();
         OnGameOver?.Invoke();
     }
 

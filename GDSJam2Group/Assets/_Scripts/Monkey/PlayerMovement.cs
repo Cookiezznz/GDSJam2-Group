@@ -168,17 +168,20 @@ public class PlayerMovement : MonoBehaviour
             || tailAttached)
         {
             body2D.MovePosition((Vector2)transform.position + bodyMovement);
+            body2D.velocity = Vector2.zero;
         }
     }
 
     void AttachLimbs()
     {
+        bool success = false;
         if (leftUpperActive && !leftUpperAttached)
         {
             if (TryGrabHand(leftUpperHand))
             {
                 leftUpperAttached = true;
                 OnLeftUpperAttached?.Invoke(true);
+                success = true;
             }
         }
 
@@ -188,6 +191,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 leftLowerAttached = true;
                 OnLeftLowerAttached?.Invoke(true);
+                success = true;
             }
 
 
@@ -199,6 +203,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rightLowerAttached = true;
                 OnRightLowerAttached?.Invoke(true);
+                success = true;
             }
         }
 
@@ -208,6 +213,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 rightUpperAttached = true;
                 OnRightUpperAttached?.Invoke(true);
+                success = true;
             }
             
         }
@@ -218,9 +224,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 tailAttached = true;
                 OnTailAttached?.Invoke(true);
+                success = true;
             }
         }
-        
+
+        if(success) 
+            AudioManager.Instance.PlaySound("stick");
+
     }
 
     private bool TryGrabHand(Rigidbody2D hand)
@@ -243,6 +253,12 @@ public class PlayerMovement : MonoBehaviour
             //Else grabbable surface
             if (socket != null)
             {
+                if (hit.transform.CompareTag("Prop"))
+                {
+                    Prop prop = hit.transform.GetComponent<Prop>();
+                    if(prop.prop == Prop.Props.Banana)EatBanana(prop);
+                    AudioManager.Instance.PlaySound("pickup");
+                }
                 socket.enabled = true;
                 socket.connectedBody = hand;
 
@@ -267,7 +283,11 @@ public class PlayerMovement : MonoBehaviour
                     TailJointSocket = socket;
                 }
             }
-            else { hand.constraints = RigidbodyConstraints2D.FreezeAll; }
+            else
+            {
+                hand.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
+            
             return true;
         }
 
@@ -276,12 +296,14 @@ public class PlayerMovement : MonoBehaviour
 
     void DetachLimbs()
     {
+        bool success = false;
         if (leftUpperActive)
         {
             leftUpperAttached = false;
             leftUpperHand.constraints = RigidbodyConstraints2D.None;
             OnLeftUpperAttached?.Invoke(false);
             RemoveSocket(LeftHandJointSocket);
+            success = true;
         }
 
         if (leftLowerActive)
@@ -290,6 +312,7 @@ public class PlayerMovement : MonoBehaviour
             leftLowerHand.constraints = RigidbodyConstraints2D.None;
             OnLeftLowerAttached?.Invoke(false);
             RemoveSocket(LeftFootJointSocket);
+            success = true;
 
         }
 
@@ -299,6 +322,7 @@ public class PlayerMovement : MonoBehaviour
             rightLowerHand.constraints = RigidbodyConstraints2D.None;
             OnRightLowerAttached?.Invoke(false);
             RemoveSocket(RightFootJointSocket);
+            success = true;
         }
 
         if (rightUpperActive)
@@ -307,6 +331,7 @@ public class PlayerMovement : MonoBehaviour
             rightUpperHand.constraints = RigidbodyConstraints2D.None;
             OnRightUpperAttached?.Invoke(false);
             RemoveSocket(RightHandJointSocket);
+            success = true;
         }
 
         if (tailActive)
@@ -315,7 +340,11 @@ public class PlayerMovement : MonoBehaviour
             tailHand.constraints = RigidbodyConstraints2D.None;
             OnTailAttached?.Invoke(false);
             RemoveSocket(TailJointSocket);
+            success = true;
         }
+
+        if(success)
+            AudioManager.Instance.PlaySound("unstick");
     }
 
     private void OnDrawGizmos()
@@ -338,5 +367,11 @@ public class PlayerMovement : MonoBehaviour
             socket.enabled = false;
             socket = null;
         }
+    }
+
+    void EatBanana(Prop banana)
+    {
+        AudioManager.Instance.PlaySound("eat");
+        Destroy(banana.gameObject);
     }
 }

@@ -40,6 +40,7 @@ public class Dispenser : MonoBehaviour
     }
     public void SpawnScrap()
     {
+        AudioManager.Instance.PlaySound("scrap");
         currentScrap = Instantiate(scrap, output.position, output.rotation, propsHolder);
         OnDispensed?.Invoke();
     }

@@ -12,8 +12,8 @@ public class CableBehaviour : MonoBehaviour
     public float delayBeforeStart;
     CableLineRenderer cableVisual;
 
-    public Material cableMaterial;
-    public Material electrifiedCableMaterial;
+    public Color safeColour;
+    public Color hazardColour;
 
     public int[] activeStages;
     bool active;
@@ -77,7 +77,9 @@ public class CableBehaviour : MonoBehaviour
     public void Electrify()
     {
         electrified = true;
-        cableVisual.lineRenderer.material = electrifiedCableMaterial;
+        cableVisual.lineRenderer.startColor = hazardColour;
+        cableVisual.lineRenderer.endColor = hazardColour;
+
         cableVisual.Electrify();
     }
 
@@ -86,7 +88,8 @@ public class CableBehaviour : MonoBehaviour
     public void Delectrify()
     {
         electrified = false;
-        cableVisual.lineRenderer.material = cableMaterial;
+        cableVisual.lineRenderer.startColor = safeColour;
+        cableVisual.lineRenderer.endColor = safeColour;
         cableVisual.Delectrify();
     }
 

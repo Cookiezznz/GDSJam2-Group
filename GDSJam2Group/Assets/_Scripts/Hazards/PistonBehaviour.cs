@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PistonBehaviour : MonoBehaviour
@@ -25,7 +26,7 @@ public class PistonBehaviour : MonoBehaviour
 
     public int[] activeStages;
     bool active;
-
+    public bool oneTime;
 
 
     private void OnEnable()
@@ -58,7 +59,7 @@ public class PistonBehaviour : MonoBehaviour
         }
         else
         {
-            if (moving) { Moving = false; }
+            if (moving) { StopAllCoroutines(); StartCoroutine(ReturnToOrigin()); }
         }
     }
 
@@ -99,7 +100,7 @@ public class PistonBehaviour : MonoBehaviour
                 if (transform.position == destination.position)
                 {
                     enRoute = false;
-                    retracting = true;
+                    if (!oneTime) { retracting = true; }
                     Debug.Log("Destination Reached!");
                     currentDist = 0;
                 }
@@ -115,6 +116,38 @@ public class PistonBehaviour : MonoBehaviour
             }
         }
     }
+
+
+
+    IEnumerator ReturnToOrigin()
+    {
+        while (moving)
+        {
+            {
+                currentDist += speed * Time.deltaTime;
+                currentDist = Mathf.Clamp(currentDist, 0, travelDist);
+                transform.position = Vector3.MoveTowards(transform.position, origin.position, currentDist);
+            }
+            if (transform.position == origin.position)
+            {
+                enRoute = false;
+                retracting = false;
+                moving = false;
+                Debug.Log("Origin Reached!");
+                currentDist = 0;
+            }
+
+            yield return null;
+        }
+    }
+
+
+
+
+
+
+
+
 
 
 

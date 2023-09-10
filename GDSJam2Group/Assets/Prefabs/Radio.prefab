@@ -197,6 +197,8 @@ MonoBehaviour:
   bananaPopStation: {fileID: 8300000, guid: e1f227a53975d2f4b9ef0681aa981f47, type: 3}
   stationOptions:
   - {fileID: 8300000, guid: 6f70a2861858da34bb9ac58a884dd517, type: 3}
+  - {fileID: 8300000, guid: a8acf9dea1594ef4e889a5f7515cf7ad, type: 3}
+  - {fileID: 8300000, guid: e8b4c90834ceab3478eb8810ac6f2fcd, type: 3}
   minDistance: 5
   maxDistance: 15
   monkeyTransform: {fileID: 0}

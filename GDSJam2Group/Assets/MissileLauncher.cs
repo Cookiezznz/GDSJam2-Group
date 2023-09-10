@@ -24,7 +24,7 @@ public class MissileLauncher : MonoBehaviour
 
     IEnumerator LaunchMissile()
     {
-        AudioManager.Instance.PlayDialogue("missileLaunch");
+        AudioManager.Instance.PlayDialogue("missile");
         //Start dialogue
         yield return new WaitForSeconds(launchDialogDuration);
         missiles[0].SetTrigger("Launch");

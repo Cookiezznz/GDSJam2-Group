@@ -59,6 +59,7 @@ public class GameStateManager : Singleton<GameStateManager>
     {
         if(IsPaused || Time.timeScale == 0) ResumeGame();
         gameState = new GameState();
+        StageStarted?.Invoke(currentStage);
         OnGameStart?.Invoke();
 
     }

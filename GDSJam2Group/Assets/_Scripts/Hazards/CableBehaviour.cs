@@ -13,12 +13,56 @@ public class CableBehaviour : MonoBehaviour
 
     public Material cableMaterial;
     public Material electrifiedCableMaterial;
-    
+
+    public int[] activeStages;
+    bool active;
+
+
+
+    private void OnEnable()
+    {
+        GameStateManager.StageStarted += CheckForActivate;
+    }
+
+    private void OnDisable()
+    {
+        GameStateManager.StageStarted -= CheckForActivate;
+    }
+
+
+
+
+    void CheckForActivate(int currentStage)
+    {
+        foreach (var activeStage in activeStages)
+        {
+            ToggleActive(currentStage == activeStage);
+        }
+    }
+
+
+    void ToggleActive(bool checkActiveStage)
+    {
+        if (checkActiveStage == active) return;
+        active = checkActiveStage;
+
+        if (active)
+        {
+            if (electrified) { Electrify(); }
+            if (alternatesOnOff) { BeginAlternatingElectricity(); }
+        }
+        else
+        {
+            if (electrified) { Delectrify(); }
+            if (alternatesOnOff) { EndAlternatingElectricity(); }
+        }
+    }
+
+
+
     private void Start()
     {
         cableVisual = GetComponent<CableLineRenderer>();
-        if (electrified) { Electrify(); }
-        if (alternatesOnOff) { BeginAlternatingElectricity(); }
     }
 
 

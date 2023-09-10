@@ -117,7 +117,7 @@ public class CableLineRenderer : MonoBehaviour
     {
         foreach (var joint in joints)
         {
-            joint.tag = "Hazard";
+            joint.tag = "HazardElectric";
         }
     }
 

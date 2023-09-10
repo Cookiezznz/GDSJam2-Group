@@ -199,6 +199,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6f70a2861858da34bb9ac58a884dd517, type: 3}
   - {fileID: 8300000, guid: a8acf9dea1594ef4e889a5f7515cf7ad, type: 3}
   - {fileID: 8300000, guid: e8b4c90834ceab3478eb8810ac6f2fcd, type: 3}
+  - {fileID: 8300000, guid: 665c51df149357140bebabc607eaf50d, type: 3}
+  - {fileID: 8300000, guid: cecc3109a6fe77d4994e8b829e79f2a3, type: 3}
   minDistance: 5
   maxDistance: 15
   monkeyTransform: {fileID: 0}

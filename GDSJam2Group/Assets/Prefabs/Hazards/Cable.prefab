@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8d5fe737a286fe64a9e689282710cb5b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -191,7 +191,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8d5fe737a286fe64a9e689282710cb5b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -302,7 +302,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -0.5}
+  m_ConnectedAnchor: {x: 2.6547003, y: -1.559}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -562,3 +562,4 @@ MonoBehaviour:
   cableMaterial: {fileID: 2100000, guid: f6889b8f654ce914daf50eeeba1a1840, type: 2}
   electrifiedCableMaterial: {fileID: 2100000, guid: 62bcc8009cc86e14d9d6168af9c90200,
     type: 2}
+  activeStages: 

@@ -132,26 +132,31 @@ public class PlayerMovement : MonoBehaviour
         if (leftUpperActive && !leftUpperAttached)
         {
             leftUpperHand.MovePosition((Vector2)leftUpperHand.transform.position + limbMovement);
+            leftUpperHand.velocity = Vector2.zero;
         }
 
         if (leftLowerActive && !leftLowerAttached)
         {
             leftLowerHand.MovePosition((Vector2)leftLowerHand.transform.position + limbMovement);
+            leftLowerHand.velocity = Vector2.zero;
         }
 
         if (rightLowerActive && !rightLowerAttached)
         {
             rightLowerHand.MovePosition((Vector2)rightLowerHand.transform.position + limbMovement);
+            rightLowerHand.velocity = Vector2.zero;
         }
 
         if (rightUpperActive && !rightUpperAttached)
         {
             rightUpperHand.MovePosition((Vector2)rightUpperHand.transform.position + limbMovement);
+            rightUpperHand.velocity = Vector2.zero;
         }
 
         if (tailActive && !tailAttached)
         {
             tailHand.MovePosition((Vector2)tailHand.transform.position + limbMovement);
+            tailHand.velocity = Vector2.zero;
         }
 
         float bodySpeed = Mathf.Min(bodyMovementSpeed * movementDelta.magnitude,bodyMaxSpeed);
@@ -293,7 +298,7 @@ public class PlayerMovement : MonoBehaviour
             rightLowerAttached = false;
             rightLowerHand.constraints = RigidbodyConstraints2D.None;
             OnRightLowerAttached?.Invoke(false);
-            RemoveSocket(RightHandJointSocket);
+            RemoveSocket(RightFootJointSocket);
         }
 
         if (rightUpperActive)
@@ -301,7 +306,7 @@ public class PlayerMovement : MonoBehaviour
             rightUpperAttached = false;
             rightUpperHand.constraints = RigidbodyConstraints2D.None;
             OnRightUpperAttached?.Invoke(false);
-            RemoveSocket(RightFootJointSocket);
+            RemoveSocket(RightHandJointSocket);
         }
 
         if (tailActive)
@@ -329,7 +334,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (socket != null)
         {
-            socket.connectedBody = socket.gameObject.GetComponent<Rigidbody2D>();
+            socket.connectedBody = null;
             socket.enabled = false;
             socket = null;
         }

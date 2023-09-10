@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Stats")]
     public float limbMovementSpeed;
     public float limbMaxSpeed;
+    public float bodyMovementSpeed;
+    public float bodyMaxSpeed;
     [Tooltip("The radius (units) from which limbs can grab objects.")]
     public float grabRadius;
     public bool toggleGravityOnActivate;
@@ -152,18 +154,21 @@ public class PlayerMovement : MonoBehaviour
             tailHand.MovePosition((Vector2)tailHand.transform.position + limbMovement);
         }
 
+        float bodySpeed = Mathf.Min(bodyMovementSpeed * movementDelta.magnitude,bodyMaxSpeed);
+        Vector2 bodyMovement = bodySpeed * Time.fixedDeltaTime * movementDelta.normalized;
+
         //If any limb is attached AND active, move the body.
         if (leftUpperAttached || leftLowerAttached 
             || rightUpperAttached || rightLowerAttached
             || tailAttached)
         {
-            body2D.MovePosition((Vector2)transform.position + limbMovement);
+            body2D.MovePosition((Vector2)transform.position + bodyMovement);
         }
     }
 
     void AttachLimbs()
     {
-        if (leftUpperActive)
+        if (leftUpperActive && !leftUpperAttached)
         {
             if (TryGrabHand(leftUpperHand))
             {
@@ -172,7 +177,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (leftLowerActive)
+        if (leftLowerActive && !leftLowerAttached)
         {
             if (TryGrabHand(leftLowerHand))
             {
@@ -183,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (rightLowerActive)
+        if (rightLowerActive && !rightLowerAttached)
         {
             if (TryGrabHand(rightLowerHand))
             {
@@ -192,7 +197,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (rightUpperActive)
+        if (rightUpperActive && !rightUpperAttached)
         {
             if(TryGrabHand(rightUpperHand))
             {
@@ -202,7 +207,7 @@ public class PlayerMovement : MonoBehaviour
             
         }
 
-        if (tailActive)
+        if (tailActive && !tailAttached)
         {
             if (TryGrabHand(tailHand))
             {
@@ -227,13 +232,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 //Grabbed a hazard, what happens?
                 return true;
-            }
-            //Test for props
-            if (hit.transform.CompareTag("Prop"))
-            {
-                //Grabbed a prop
-                /*hit.transform.parent = transform;*/
-                //return true;
             }
 
             DistanceJoint2D socket = hit.transform.GetComponent<DistanceJoint2D>();

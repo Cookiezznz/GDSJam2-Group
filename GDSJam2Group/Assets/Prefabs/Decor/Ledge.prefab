@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7889398902510196697}
-  - component: {fileID: 2050388885013573071}
-  - component: {fileID: 4066230384203885449}
+  - component: {fileID: 7520021312502343953}
+  - component: {fileID: 1590933676880152356}
   m_Layer: 7
   m_Name: Ledge
   m_TagString: Untagged
@@ -28,12 +28,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.62, y: 22.596, z: 0}
-  m_LocalScale: {x: 1.74, y: 1.74, z: 1.74}
+  m_LocalScale: {x: 1.74, y: 1.7399999, z: 1.74}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2050388885013573071
+--- !u!212 &7520021312502343953
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,20 +73,20 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2002973263
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7fba6b248b3726a48981b0037fa0fa69, type: 3}
-  m_Color: {r: 0.4509804, g: 0.20784314, b: 0.20784314, a: 1}
+  m_Color: {r: 0.46226418, g: 0.25844547, b: 0.16353686, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 7.33, y: 3.61}
+  m_Size: {x: 6.8, y: 2.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &4066230384203885449
-PolygonCollider2D:
+--- !u!61 &1590933676880152356
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,22 +117,16 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.32, y: -0.26}
   m_SpriteTilingProperty:
-    border: {x: 1.13, y: 0, z: 0.96, w: 0}
+    border: {x: 1.63, y: 0, z: 1.64, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.55, y: 3.61}
-    newSize: {x: 7.33, y: 3.61}
+    oldSize: {x: 6.8, y: 2.43}
+    newSize: {x: 6.8, y: 2.43}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 3.038566, y: -0.051478222}
-      - {x: -3.2739682, y: -0.028405614}
-      - {x: -3.3147082, y: -0.25691724}
-      - {x: -2.839842, y: -0.44418937}
-      - {x: 2.8329813, y: -0.4716333}
-      - {x: 3.0525255, y: -0.3653772}
-  m_UseDelaunayMesh: 0
+  serializedVersion: 2
+  m_Size: {x: 5.02, y: 0.25}
+  m_EdgeRadius: 0

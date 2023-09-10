@@ -58,7 +58,7 @@ public class CableBehaviour : MonoBehaviour
 
 
 
-    private void Start()
+    private void Awake()
     {
         cableVisual = GetComponent<CableLineRenderer>();
     }
@@ -77,6 +77,8 @@ public class CableBehaviour : MonoBehaviour
     public void Electrify()
     {
         electrified = true;
+        if(!cableVisual) GetComponent<CableLineRenderer>();
+        Debug.Log($"{cableVisual == null} + {gameObject.name}" );
         cableVisual.lineRenderer.startColor = hazardColour;
         cableVisual.lineRenderer.endColor = hazardColour;
 

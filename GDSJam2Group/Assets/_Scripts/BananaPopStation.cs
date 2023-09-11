@@ -11,15 +11,18 @@ public class BananaPopStation : MonoBehaviour
     [SerializeField] private float maxDistance;
     [SerializeField] private Transform monkeyTransform;
 
-    private AudioSource radioSource;
+    [SerializeField] AudioSource[] radioSources;
     private AudioClip currentClip;
 
     // Start is called before the first frame update
     void Start()
     {
-        radioSource = GetComponent<AudioSource>();
         currentClip = bananaPopStation;
-        radioSource.PlayOneShot(currentClip);
+        foreach (var source in radioSources)
+        {
+            source.PlayOneShot(currentClip);
+        }
+       
     }
 
     // Update is called once per frame
@@ -28,31 +31,27 @@ public class BananaPopStation : MonoBehaviour
         if (monkeyTransform == null)
             monkeyTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
-        float dist = Vector3.Distance(transform.position, monkeyTransform.position);
-
-        if (dist < minDistance)
+        foreach (var source in radioSources)
         {
-            radioSource.volume = 1;
+            if (!source.isPlaying)
+            {
+                if (currentClip == bananaPopStation)
+                    currentClip = stationOptions[Random.Range(0, stationOptions.Length - 1)];
+
+                else
+                    currentClip = bananaPopStation;
+
+                source.PlayOneShot(currentClip);
+            }
         }
-        else if (dist > maxDistance)
+    }
+
+    void OnValidate()
+    {
+        foreach (var source in radioSources)
         {
-            radioSource.volume = 0;
-        }
-        else
-        {
-            radioSource.volume = 1 - ((dist - minDistance) / (maxDistance - minDistance));
-        }
-
-
-        if (!radioSource.isPlaying)
-        {
-            if (currentClip == bananaPopStation)
-                currentClip = stationOptions[Random.Range(0, stationOptions.Length - 1)];
-
-            else
-                currentClip = bananaPopStation;
-
-            radioSource.PlayOneShot(currentClip);
+            source.minDistance = minDistance;
+            source.maxDistance = maxDistance;
         }
     }
 }

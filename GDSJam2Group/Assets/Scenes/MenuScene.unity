@@ -1515,7 +1515,7 @@ GameObject:
   - component: {fileID: 1461997978}
   - component: {fileID: 1461997977}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: BG Repeat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1825,7 +1825,7 @@ GameObject:
   - component: {fileID: 1917879506}
   - component: {fileID: 1917879505}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

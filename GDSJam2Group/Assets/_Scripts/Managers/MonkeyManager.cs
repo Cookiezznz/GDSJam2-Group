@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MonkeyManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class MonkeyManager : MonoBehaviour
     public Transform respawnPoint;
     public GameObject monkeyPrefab;
     public PlayerController currentMonkey;
+    public TextMeshProUGUI expireRespawnCounterUI;
 
     public static event Action<GameObject> OnMonkeySpawned;
 
@@ -33,6 +35,7 @@ public class MonkeyManager : MonoBehaviour
         yield return new WaitForSeconds(respawnTimer);
 
         monkeysExpired++;
+        expireRespawnCounterUI.text = $"{monkeysExpired}";
         GameObject monkey = Instantiate(monkeyPrefab, transform);
         monkey.name = "Monkey";
 

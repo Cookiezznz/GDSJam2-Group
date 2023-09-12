@@ -11,31 +11,31 @@ public class MonkeyManager : MonoBehaviour
     public Transform respawnPoint;
     public GameObject monkeyPrefab;
     public PlayerController currentMonkey;
-    public TextMeshProUGUI expireRespawnCounterUI;
 
     public static event Action<GameObject> OnMonkeySpawned;
+    public static event Action<int> OnMonkeyExpired;
 
     void OnEnable()
     {
-        PlayerController.OnMonkeyExpired += RespawnMonkey;
+        PlayerController.OnMonkeyExpired += NewExpiry;
     }
 
     void OnDisable()
     {
-        PlayerController.OnMonkeyExpired -= RespawnMonkey;
+        PlayerController.OnMonkeyExpired -= NewExpiry;
     }
 
-    void RespawnMonkey()
+    void NewExpiry()
     {
+        monkeysExpired++;
+        OnMonkeyExpired?.Invoke(monkeysExpired);
         StartCoroutine(Respawn());
     }
 
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(respawnTimer);
-
-        monkeysExpired++;
-        expireRespawnCounterUI.text = $"{monkeysExpired}";
+        
         GameObject monkey = Instantiate(monkeyPrefab, transform);
         monkey.name = "Monkey";
 

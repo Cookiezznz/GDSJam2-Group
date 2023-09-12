@@ -4275,7 +4275,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4187622, y: 0.74771, z: -1}
+  m_LocalPosition: {x: -2.4298754, y: 0.74771, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5033,6 +5033,8 @@ MonoBehaviour:
   gameOverScreen: {fileID: 2067204145}
   gameOverWinLossText: {fileID: 1121421661}
   gameOverScore: {fileID: 1741895920}
+  expireUIAnim: {fileID: 5571060901891221562}
+  expireText: {fileID: 1072141871}
 --- !u!1 &359829147
 GameObject:
   m_ObjectHideFlags: 0
@@ -19665,7 +19667,6 @@ MonoBehaviour:
   monkeyPrefab: {fileID: 1947420217711730452, guid: 9ee21790b600b8e438c7d688c0b1a569,
     type: 3}
   currentMonkey: {fileID: 2088448560}
-  expireRespawnCounterUI: {fileID: 1072141871}
 --- !u!1001 &1395237039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22390,15 +22391,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566786443}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f6467b4f18dccb49b83f34ea8187cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vCam: {fileID: 1566786445}
   vConfiner: {fileID: 1566786446}
-  orthoRange: {x: 10, y: 20}
-  speedRange: {x: 4, y: 20}
+  orthoRange: {x: 6, y: 11}
+  speedRange: {x: 4, y: 30}
   speedToZoomCurve:
     serializedVersion: 2
     m_Curve:
@@ -30564,6 +30565,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 357498895}
     m_Modifications:
+    - target: {fileID: 69475661625845743, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 69475661625845743, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1080344078433453609, guid: 2cb926478de653f4799ceaf06915d907,
         type: 3}
       propertyPath: m_Pivot.x
@@ -30699,11 +30710,77 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 6591691740681483850, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591691740681483850, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7003949501077347727, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7003949501077347727, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011559220624473870, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7011559220624473870, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198888700711367161, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198888700711367161, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696549191869716892, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696549191869716892, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134174742658603516, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134174742658603516, guid: 2cb926478de653f4799ceaf06915d907,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cb926478de653f4799ceaf06915d907, type: 3}
+--- !u!95 &5571060901891221562 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3908590260391835614, guid: 2cb926478de653f4799ceaf06915d907,
+    type: 3}
+  m_PrefabInstance: {fileID: 5571060901891221560}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6132162212637074983
 PrefabInstance:
   m_ObjectHideFlags: 0

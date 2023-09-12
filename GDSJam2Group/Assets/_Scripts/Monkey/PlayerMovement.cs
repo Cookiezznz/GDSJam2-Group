@@ -138,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveLimbs()
     {
-        Vector2 limbMovement = limbMovementSpeed * Time.fixedDeltaTime * moveDirection;
+        Vector2 limbMovement = limbMovementSpeed * Time.fixedDeltaTime * moveDirection.normalized;
         
         if (leftUpperActive && !leftUpperAttached)
         {
@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
             tailHand.MovePosition((Vector2)tailHand.transform.position + limbMovement);
         }
         
-        Vector2 bodyMovement = bodyMovementSpeed * Time.fixedDeltaTime * moveDirection;
+        Vector2 bodyMovement = bodyMovementSpeed * Time.fixedDeltaTime * moveDirection.normalized;
 
         //If any limb is attached
         if (leftUpperAttached || leftLowerAttached 

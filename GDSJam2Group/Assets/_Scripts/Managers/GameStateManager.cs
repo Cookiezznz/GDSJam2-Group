@@ -27,6 +27,7 @@ public class GameStateManager : Singleton<GameStateManager>
     public static event Action<int> StageStarted;
 
     public List<CableLineRenderer> cables;
+    public MonkeyManager monkeyManager;
 
 
     void OnEnable()
@@ -73,12 +74,14 @@ public class GameStateManager : Singleton<GameStateManager>
 
     void GameUpdate()
     {
-
         // Renders dynamic cables
         foreach (var cable in cables)
         {
             cable.CableUpdate();
         }
+        if(monkeyManager.currentMonkey)
+            monkeyManager.currentMonkey.PlayerUpdate();
+
     }
 
     public void PauseGame()

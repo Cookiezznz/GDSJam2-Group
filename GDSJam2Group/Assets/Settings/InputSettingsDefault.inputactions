@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "PointerUpdate",
+                    "type": "Value",
+                    "id": "9c5da7b6-a253-404f-b91e-cdc7126bb2c6",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Primary",
                     "type": "Button",
                     "id": "6c2ab1b8-8984-453a-af3d-a3c78ae1679a",
@@ -234,7 +243,7 @@
                 {
                     "name": "",
                     "id": "834a294d-b165-447d-ad30-ad5582bafa46",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -300,7 +309,7 @@
                 {
                     "name": "",
                     "id": "f7406ff3-a8d8-476c-85e2-4e8d27a3129c",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -366,11 +375,33 @@
                 {
                     "name": "",
                     "id": "49c5dabd-f47f-4c89-b3ab-270b933ced0b",
-                    "path": "<Gamepad>/buttonSouth",
+                    "path": "<Gamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Expire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b29d4184-89eb-488a-9cb5-20ea1112a78c",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PointerUpdate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "51270655-86b7-4e5a-8611-91d473a9a302",
+                    "path": "<Pointer>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "PointerUpdate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

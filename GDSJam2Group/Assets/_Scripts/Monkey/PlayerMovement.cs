@@ -4,19 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerMovement : MonoBehaviour
 {
     public PlayerController controller;
     [Header("Stats")]
     public float limbMovementSpeed;
-    public float limbMaxSpeed;
     public float bodyMovementSpeed;
-    public float bodyMaxSpeed;
     [Tooltip("The radius (units) from which limbs can grab objects.")]
     public float grabRadius;
     public bool toggleGravityOnActivate;
-    public float spawnPipeForce;
+    public Vector2 spawnPipeForce;
+    private Vector2 moveDirection;
 
 
     [Header("Limbs")] 
@@ -70,7 +70,8 @@ public class PlayerMovement : MonoBehaviour
         InputManager.onRightUpper += ToggleRightUpper;
         InputManager.onRightLower += ToggleRightLower;
         InputManager.onTail += ToggleTail;
-        InputManager.OnLookUpdated += MoveLimbs;
+        InputManager.OnLookUpdated += SetMoveDirection;
+        InputManager.OnPointerUpdated += SetMoveDirection;
         InputManager.OnPrimaryPressed += AttachLimbs;
         InputManager.OnSecondaryPressed += DetachLimbs;
     }
@@ -82,14 +83,25 @@ public class PlayerMovement : MonoBehaviour
         InputManager.onRightUpper -= ToggleRightUpper;
         InputManager.onRightLower -= ToggleRightLower;
         InputManager.onTail -= ToggleTail;
-        InputManager.OnLookUpdated -= MoveLimbs;
+        InputManager.OnLookUpdated -= SetMoveDirection;
+        InputManager.OnPointerUpdated -= SetMoveDirection;
         InputManager.OnPrimaryPressed -= AttachLimbs;
         InputManager.OnSecondaryPressed -= DetachLimbs;
     }
 
     void Start()
     {
-        body2D.AddForce(Vector2.right * spawnPipeForce, ForceMode2D.Impulse);
+        body2D.AddForce(Vector2.right * Random.Range(spawnPipeForce.x, spawnPipeForce.y), ForceMode2D.Impulse);
+    }
+
+    public void MovementUpdate()
+    {
+        MoveLimbs();
+    }
+
+    public void SetMoveDirection(Vector2 moveDir)
+    {
+        moveDirection = moveDir;
     }
     private void ToggleLeftUpper(bool toggle)
     {
@@ -122,53 +134,51 @@ public class PlayerMovement : MonoBehaviour
             tail.gravityScale = toggle ? 0 : 1;
     }
 
-    private void MoveLimbs(Vector2 movementDelta)
-    {
-        if (controller.monkeyExpired) return;
 
-        float limbSpeed = Mathf.Min(limbMovementSpeed * movementDelta.magnitude, limbMaxSpeed);
-        Vector2 limbMovement = limbSpeed * Time.fixedDeltaTime * movementDelta.normalized;
+
+    private void MoveLimbs()
+    {
+        Vector2 limbMovement = limbMovementSpeed * Time.fixedDeltaTime * moveDirection;
         
         if (leftUpperActive && !leftUpperAttached)
         {
             leftUpperHand.MovePosition((Vector2)leftUpperHand.transform.position + limbMovement);
-            leftUpperHand.velocity = Vector2.zero;
         }
 
         if (leftLowerActive && !leftLowerAttached)
         {
             leftLowerHand.MovePosition((Vector2)leftLowerHand.transform.position + limbMovement);
-            leftLowerHand.velocity = Vector2.zero;
         }
 
         if (rightLowerActive && !rightLowerAttached)
         {
             rightLowerHand.MovePosition((Vector2)rightLowerHand.transform.position + limbMovement);
-            rightLowerHand.velocity = Vector2.zero;
         }
 
         if (rightUpperActive && !rightUpperAttached)
         {
             rightUpperHand.MovePosition((Vector2)rightUpperHand.transform.position + limbMovement);
-            rightUpperHand.velocity = Vector2.zero;
         }
 
         if (tailActive && !tailAttached)
         {
             tailHand.MovePosition((Vector2)tailHand.transform.position + limbMovement);
-            tailHand.velocity = Vector2.zero;
         }
+        
+        Vector2 bodyMovement = bodyMovementSpeed * Time.fixedDeltaTime * moveDirection;
 
-        float bodySpeed = Mathf.Min(bodyMovementSpeed * movementDelta.magnitude,bodyMaxSpeed);
-        Vector2 bodyMovement = bodySpeed * Time.fixedDeltaTime * movementDelta.normalized;
-
-        //If any limb is attached AND active, move the body.
+        //If any limb is attached
         if (leftUpperAttached || leftLowerAttached 
             || rightUpperAttached || rightLowerAttached
             || tailAttached)
         {
-            body2D.MovePosition((Vector2)transform.position + bodyMovement);
-            body2D.velocity = Vector2.zero;
+            //if any limb is active, then move the body
+            if (leftUpperActive || leftLowerActive
+                || rightUpperActive || rightLowerActive
+                || tailActive)
+            {
+                body2D.MovePosition((Vector2)transform.position + bodyMovement);
+            }
         }
     }
 

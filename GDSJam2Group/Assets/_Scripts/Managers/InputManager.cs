@@ -10,11 +10,13 @@ public class InputManager : Singleton<InputManager>
 {
     [FormerlySerializedAs("lockMouse")] public bool lockCursor;
     private PlayerInput playerInput;
-    [SerializeField] private Vector3 lookDelta;
+    [SerializeField] private Vector2 lookDelta;
+    [SerializeField] private Vector2 pointerPos;
 
     public static event Action OnPrimaryPressed;
     public static event Action OnSecondaryPressed;
     public static event Action<Vector2> OnLookUpdated;
+    public static event Action<Vector2> OnPointerUpdated;
 
     //Left Upper
     public bool leftUpper;
@@ -48,17 +50,41 @@ public class InputManager : Singleton<InputManager>
     {
         if (!playerInput.camera)
             playerInput.camera = Camera.main;
-        
-        if(lockCursor)
+
+        if (lockCursor)
             Cursor.lockState = CursorLockMode.Locked;
+        else
+            Cursor.lockState = CursorLockMode.Confined;
+
+
     }
 
     public void OnLook(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
+        if (playerInput.currentControlScheme != "Gamepad") return;
+
         Vector2 pos = context.ReadValue<Vector2>();
         lookDelta = pos;
         OnLookUpdated?.Invoke(lookDelta);
+    }
+
+    public void OnPointerUpdate(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        if (playerInput.currentControlScheme != "Keyboard&Mouse") return;
+
+        Vector2 pos = context.ReadValue<Vector2>();
+        //Min of 0,0
+        pointerPos = Vector2.Max(pos, Vector2.zero);
+        //Normalize
+        pointerPos /= new Vector2(Screen.width, Screen.height);
+        //Max of 1,1
+        pointerPos = Vector2.Min(pointerPos, Vector2.one);
+        //Range of -0.5-0.5
+        pointerPos -= Vector2.one / 2;
+        OnPointerUpdated?.Invoke(pointerPos);
+
     }
 
     public void OnPrimary(InputAction.CallbackContext context)

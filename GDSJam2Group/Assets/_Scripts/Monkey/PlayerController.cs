@@ -25,7 +25,12 @@ public class PlayerController : MonoBehaviour
     {
         ExpireButton.OnForceExpire -= ForceExpire;
     }
-    // Start is called before the first frame update
+
+    public void PlayerUpdate()
+    {
+        if (monkeyExpired) return;
+        movement.MovementUpdate();
+    }
     public void Collide(string tag)
     {
         if (monkeyExpired) return;

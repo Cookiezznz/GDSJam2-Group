@@ -9,6 +9,7 @@ public class MonkeyManager : MonoBehaviour
     public int monkeysExpired;
     public Transform respawnPoint;
     public GameObject monkeyPrefab;
+    public PlayerController currentMonkey;
 
     public static event Action<GameObject> OnMonkeySpawned;
 
@@ -36,7 +37,7 @@ public class MonkeyManager : MonoBehaviour
         monkey.name = "Monkey";
 
         monkey.transform.position = respawnPoint.position;
-
+        currentMonkey = monkey.GetComponent<PlayerController>();
         OnMonkeySpawned?.Invoke(monkey);
 
         yield return null;

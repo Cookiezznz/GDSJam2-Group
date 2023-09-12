@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2697193567221060724}
   - component: {fileID: 3926905296381768752}
   - component: {fileID: 3299533243907145814}
-  - component: {fileID: 6701105287387140404}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -28,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7953965534004041341}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6011235303199000218
 MonoBehaviour:
@@ -48,9 +47,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7d7489aff06214f953d2c1654448e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerPositionScreenSpace: {x: 0, y: 0}
-  lookDelta: {x: 0, y: 0, z: 0}
-  moveDelta: {x: 0, y: 0, z: 0}
+  lockCursor: 0
+  lookDelta: {x: 0, y: 0}
+  pointerPos: {x: 0, y: 0}
+  leftUpper: 0
+  leftLower: 0
+  rightLower: 0
+  rightUpper: 0
+  tail: 0
+  expire: 0
 --- !u!114 &2697193567221060724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,22 +142,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6011235303199000218}
         m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
-    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6011235303199000218}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
         m_MethodName: OnLook
         m_Mode: 0
         m_Arguments:
@@ -222,35 +211,39 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6011235303199000218}
-        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
-        m_MethodName: OnPointerPosition
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: ef67461d-c99a-40d3-ae8c-568eb7481969
-    m_ActionName: Player/PointerPosition[/Mouse/position]
+      m_Calls: []
+    m_ActionId: 9c5da7b6-a253-404f-b91e-cdc7126bb2c6
+    m_ActionName: Player/PointerUpdate[/Mouse/position,/Pen/position]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6b9ffe0d-cc4c-4f44-af27-83f6c1db7d92
+    m_ActionName: Player/Secondary[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 652f36c3-583b-45f6-8578-cae51707529b
+    m_ActionName: Player/LeftArm[/Keyboard/q,/Keyboard/a,/Keyboard/leftArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f12a2a7e-a74b-4cd1-96a0-669214add104
+    m_ActionName: Player/LeftLeg[/Keyboard/w,/Keyboard/s,/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9c03eceb-f345-414d-8e1a-9f2db9aff0af
+    m_ActionName: Player/RightLeg[/Keyboard/e,/Keyboard/d,/Keyboard/upArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 56ea1b3a-27bf-4fe8-8e49-16c39f526744
+    m_ActionName: Player/RightArm[/Keyboard/r,/Keyboard/f,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 81dac346-5deb-4987-b7c6-1387a16a9842
+    m_ActionName: Player/Tail[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8acd7240-ce56-4381-8eb7-7151fece5f24
+    m_ActionName: Player/Expire[/Keyboard/t]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &6701105287387140404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7953965534004041341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f10120bd6b17ea45bf838310b23f356, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

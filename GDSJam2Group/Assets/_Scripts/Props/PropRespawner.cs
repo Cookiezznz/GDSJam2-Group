@@ -29,13 +29,14 @@ public class PropRespawner : MonoBehaviour
         if (respawnAsRefined)
         {
             RefinedRespawn?.Invoke();
-            
         }
         else
         {
             ScrapRespawn?.Invoke();
         }
-        
+
+        yield return null;
+
     }
 }
 

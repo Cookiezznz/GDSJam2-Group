@@ -256,8 +256,19 @@ public class PlayerMovement : MonoBehaviour
                 if (hit.transform.CompareTag("Prop"))
                 {
                     Prop prop = hit.transform.GetComponent<Prop>();
-                    if(prop.prop == Prop.Props.Banana)EatBanana(prop);
-                    AudioManager.Instance.PlaySound("pickup");
+                    switch (prop.prop)
+                    {
+                        case Prop.Props.Banana:
+                            EatBanana(prop);
+                            break;
+                        case Prop.Props.Scrap:
+                            AudioManager.Instance.PlaySound("pickupscrap");
+                            break;
+                        case Prop.Props.Refined:
+                            AudioManager.Instance.PlaySound("pickuprefined");
+                            break;
+
+                    }
                 }
                 socket.enabled = true;
                 socket.connectedBody = hand;

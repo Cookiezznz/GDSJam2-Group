@@ -78,7 +78,6 @@ public class PistonBehaviour : MonoBehaviour
     {
         while (moving)
         {
-            Debug.Log("Gimme a sec...");
             yield return new WaitForSeconds(stationaryTime);
             enRoute = true;
 
@@ -101,14 +100,12 @@ public class PistonBehaviour : MonoBehaviour
                 {
                     enRoute = false;
                     if (!oneTime) { retracting = true; }
-                    Debug.Log("Destination Reached!");
                     currentDist = 0;
                 }
                 if (transform.position == origin.position)
                 {
                     enRoute = false;
                     retracting = false;
-                    Debug.Log("Origin Reached!");
                     currentDist = 0;
                 }
 

@@ -78,7 +78,6 @@ public class CableBehaviour : MonoBehaviour
     {
         electrified = true;
         if(!cableVisual) GetComponent<CableLineRenderer>();
-        Debug.Log($"{cableVisual == null} + {gameObject.name}" );
         cableVisual.lineRenderer.startColor = hazardColour;
         cableVisual.lineRenderer.endColor = hazardColour;
 

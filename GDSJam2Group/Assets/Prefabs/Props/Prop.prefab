@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9f0af8c3f987949b8bf449d1dd207d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prop: 0
   respawnAsRefined: 0
   forceRangeXOnSpawn: {x: 0, y: 0}
   forceRangeYOnSpawn: {x: 0, y: 0}

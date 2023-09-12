@@ -59,7 +59,6 @@ public class ExpireButton : MonoBehaviour
 
     void UpdateFill()
     {
-        Debug.Log(this.gameObject.name);
         progress.fillAmount = timer / holdDurationToExpire;
     }
 }

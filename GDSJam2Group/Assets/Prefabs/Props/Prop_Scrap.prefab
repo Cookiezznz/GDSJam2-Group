@@ -207,48 +207,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7692559518875047325, guid: 98e594733d7157c40b4e4aeeba6b34a0,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: -8470383393254947038}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98e594733d7157c40b4e4aeeba6b34a0, type: 3}
---- !u!1 &5777393783913903212 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7692559518875047325, guid: 98e594733d7157c40b4e4aeeba6b34a0,
-    type: 3}
-  m_PrefabInstance: {fileID: 4245798413651943921}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &-8470383393254947038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5777393783913903212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06f7fe9897265394d850b03831484549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionTags:
-  - Hazard
-  onCollisionEnter:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7109633893408488039, guid: 01b346629645f5f4ab5c2148cdba4716,
-          type: 3}
-        m_TargetAssemblyTypeName: Pickup, Assembly-CSharp
-        m_MethodName: DestroyPickup
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onCollisionExit:
-    m_PersistentCalls:
-      m_Calls: []

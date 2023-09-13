@@ -42,6 +42,7 @@ public class CameraSpeedZoom : MonoBehaviour
     {
         if (target == null) return;
 
+        return;
         // Speed of target
         float currentSpeed = target.velocity.magnitude;
         

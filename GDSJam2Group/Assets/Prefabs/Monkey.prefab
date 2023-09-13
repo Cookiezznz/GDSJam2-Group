@@ -422,10 +422,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 9165224820667053214}
-  limbMovementSpeed: 3
-  bodyMovementSpeed: 3
+  limbMovementSpeed: 30
+  bodyMovementSpeed: 2
   grabRadius: 0.5
-  toggleGravityOnActivate: 1
+  toggleGravityOnActivate: 0
   spawnPipeForce: {x: 700, y: 1200}
   body2D: {fileID: 3156460194007421664}
   leftUpperActive: 0
@@ -497,7 +497,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1

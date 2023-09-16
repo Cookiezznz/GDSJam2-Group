@@ -289,29 +289,27 @@ public class PlayerMovement : MonoBehaviour
                     {
                         leftUpperHoldingProp = true;
                     }
-                    else if (hand == leftLowerHand)
+                    if (hand == leftLowerHand)
                     {
                         leftLowerHoldingProp = true;
 
                     }
-                    else if (hand == rightUpperHand)
+                    if (hand == rightUpperHand)
                     {
                         rightUpperHoldingProp = true;
 
                     }
-                    else if (hand == rightLowerHand)
+                    if (hand == rightLowerHand)
                     {
                         rightLowerHoldingProp = true;
 
                     }
-                    else if (hand == tailHand)
+                    if (hand == tailHand)
                     {
                         tailHoldingProp = true;
-
                     }
-                    
-                    
                 }
+                
                 socket.enabled = true;
                 socket.connectedBody = hand;
 
@@ -352,6 +350,7 @@ public class PlayerMovement : MonoBehaviour
         bool success = false;
         if (leftUpperActive)
         {
+            leftUpperHoldingProp = false;
             leftUpperAttached = false;
             leftUpperHand.constraints = RigidbodyConstraints2D.None;
             OnLeftUpperAttached?.Invoke(false);
@@ -361,6 +360,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (leftLowerActive)
         {
+            leftLowerHoldingProp = false;
             leftLowerAttached = false;
             leftLowerHand.constraints = RigidbodyConstraints2D.None;
             OnLeftLowerAttached?.Invoke(false);
@@ -371,6 +371,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (rightLowerActive)
         {
+            rightLowerHoldingProp = false;
             rightLowerAttached = false;
             rightLowerHand.constraints = RigidbodyConstraints2D.None;
             OnRightLowerAttached?.Invoke(false);
@@ -380,6 +381,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (rightUpperActive)
         {
+            rightUpperHoldingProp = false;
             rightUpperAttached = false;
             rightUpperHand.constraints = RigidbodyConstraints2D.None;
             OnRightUpperAttached?.Invoke(false);
@@ -388,7 +390,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (tailActive)
-        {            
+        {       
+            tailHoldingProp = false;
             tailAttached = false;
             tailHand.constraints = RigidbodyConstraints2D.None;
             OnTailAttached?.Invoke(false);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class PlayerMovement : MonoBehaviour
@@ -23,7 +24,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D body2D;
     [Header("Left Upper")]
     public bool leftUpperActive;
-    public bool leftUpperAttached;
+    public bool leftUpperAttached; 
+    public bool leftUpperHoldingProp;
     public Rigidbody2D leftUpper;
     public Rigidbody2D leftUpperHand;
     public static event Action<bool> OnLeftUpperAttached;
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Left Lower")]
     public bool leftLowerActive;
     public bool leftLowerAttached;
+    public bool leftLowerHoldingProp;
     public Rigidbody2D leftLower;
     public Rigidbody2D leftLowerHand;
     public static event Action<bool> OnLeftLowerAttached;
@@ -40,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Right Lower")]
     public bool rightLowerActive;
     public bool rightLowerAttached;
+    public bool rightLowerHoldingProp;
     public Rigidbody2D rightLower;
     public Rigidbody2D rightLowerHand;
     public static event Action<bool> OnRightLowerAttached;
@@ -48,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Right Upper")]
     public bool rightUpperActive;
     public bool rightUpperAttached;
+     public bool rightUpperHoldingProp;
     public Rigidbody2D rightUpper;
     public Rigidbody2D rightUpperHand;
     public static event Action<bool> OnRightUpperAttached;
@@ -56,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Tail")]
     public bool tailActive;
     public bool tailAttached;
+    public bool tailHoldingProp;
     public Rigidbody2D tail;
     public Rigidbody2D tailHand;
     public static event Action<bool> OnTailAttached;
@@ -165,18 +171,17 @@ public class PlayerMovement : MonoBehaviour
             tailHand.MovePosition((Vector2)tailHand.transform.position + limbMovement);
         }
         
-        Vector2 bodyMovement = bodyMovementSpeed * Time.fixedDeltaTime * moveDirection.normalized;
-
         //If any limb is attached
-        if (leftUpperAttached || leftLowerAttached 
-            || rightUpperAttached || rightLowerAttached
-            || tailAttached)
+        if (leftUpperAttached && !leftUpperHoldingProp || leftLowerAttached  && !leftLowerHoldingProp 
+            || rightUpperAttached && !rightUpperHoldingProp  || rightLowerAttached && !rightLowerHoldingProp 
+            || tailAttached && !tailHoldingProp )
         {
             //if any limb is active, then move the body
             if (leftUpperActive || leftLowerActive
                 || rightUpperActive || rightLowerActive
                 || tailActive)
             {
+                Vector2 bodyMovement = bodyMovementSpeed * Time.fixedDeltaTime * moveDirection.normalized;
                 body2D.MovePosition((Vector2)transform.position + bodyMovement);
             }
         }
@@ -270,7 +275,7 @@ public class PlayerMovement : MonoBehaviour
                     {
                         case Prop.Props.Banana:
                             EatBanana(prop);
-                            break;
+                            return false;
                         case Prop.Props.Scrap:
                             AudioManager.Instance.PlaySound("pickupscrap");
                             break;
@@ -279,6 +284,33 @@ public class PlayerMovement : MonoBehaviour
                             break;
 
                     }
+                    //Toggle holding prop booleans
+                    if (hand == leftUpperHand)
+                    {
+                        leftUpperHoldingProp = true;
+                    }
+                    else if (hand == leftLowerHand)
+                    {
+                        leftLowerHoldingProp = true;
+
+                    }
+                    else if (hand == rightUpperHand)
+                    {
+                        rightUpperHoldingProp = true;
+
+                    }
+                    else if (hand == rightLowerHand)
+                    {
+                        rightLowerHoldingProp = true;
+
+                    }
+                    else if (hand == tailHand)
+                    {
+                        tailHoldingProp = true;
+
+                    }
+                    
+                    
                 }
                 socket.enabled = true;
                 socket.connectedBody = hand;
@@ -287,19 +319,19 @@ public class PlayerMovement : MonoBehaviour
                 {
                     LeftHandJointSocket = socket;
                 }
-                if (hand == leftLowerHand)
+                else if (hand == leftLowerHand)
                 {
                     LeftFootJointSocket = socket;
                 }
-                if (hand == rightUpperHand)
+                else if (hand == rightUpperHand)
                 {
                     RightHandJointSocket = socket;
                 }
-                if (hand == rightLowerHand)
+                else if (hand == rightLowerHand)
                 {
                     RightFootJointSocket = socket;
                 }
-                if (hand == tailHand)
+                else if (hand == tailHand)
                 {
                     TailJointSocket = socket;
                 }

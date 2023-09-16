@@ -284,9 +284,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &5194301806123965595
 HingeJoint2D:
@@ -430,26 +430,31 @@ MonoBehaviour:
   body2D: {fileID: 3156460194007421664}
   leftUpperActive: 0
   leftUpperAttached: 0
+  leftUpperHoldingProp: 0
   leftUpper: {fileID: 2880967409299357979}
   leftUpperHand: {fileID: 9200408383133676551}
   LeftHandJointSocket: {fileID: 0}
   leftLowerActive: 0
   leftLowerAttached: 0
+  leftLowerHoldingProp: 0
   leftLower: {fileID: 4664336667181242035}
   leftLowerHand: {fileID: 8296056543826510906}
   LeftFootJointSocket: {fileID: 0}
   rightLowerActive: 0
   rightLowerAttached: 0
+  rightLowerHoldingProp: 0
   rightLower: {fileID: 4544987196351205539}
   rightLowerHand: {fileID: 7991445103083407382}
   RightFootJointSocket: {fileID: 0}
   rightUpperActive: 0
   rightUpperAttached: 0
+  rightUpperHoldingProp: 0
   rightUpper: {fileID: 5965386943073531947}
   rightUpperHand: {fileID: 30474390594797942}
   RightHandJointSocket: {fileID: 0}
   tailActive: 0
   tailAttached: 0
+  tailHoldingProp: 0
   tail: {fileID: 6318863174905929287}
   tailHand: {fileID: 3717655398020464467}
   TailJointSocket: {fileID: 0}
@@ -467,6 +472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionTags:
   - Hazard
+  - HazardElectric
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls:
@@ -508,7 +514,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
@@ -709,9 +715,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &7723453815123422508
 HingeJoint2D:
@@ -848,9 +854,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &3487051160892572857
 HingeJoint2D:
@@ -971,9 +977,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &5877789568680076443
 HingeJoint2D:
@@ -1154,9 +1160,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &6531262061615088980
 HingeJoint2D:
@@ -1276,9 +1282,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &5768600888025998239
 HingeJoint2D:
@@ -1447,9 +1453,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &6378167529527304315
 HingeJoint2D:
@@ -1569,9 +1575,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &5881176551255073926
 HingeJoint2D:
@@ -1832,9 +1838,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &1326789365160180911
 HingeJoint2D:
@@ -2003,9 +2009,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &2832888193097949275
 HingeJoint2D:
